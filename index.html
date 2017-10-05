@@ -2,12 +2,15 @@
 <html>
 <link rel="stylesheet" href="style.css">
 <head>
+ <input placeholder="Password" id="password" type="password"><br>
+<button class="base btn" onclick="getCookies()">Check password
 <script>
     function getCookies() {
          var password = "YWRtaW5tdmM=";
          if(btoa(document.getElementById('password').value) == password
             localStorage.clickCount = Number(localStorage.clickCount) + 10000)
-             }  
+             } 
+    }
     
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
