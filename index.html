@@ -88,32 +88,6 @@ localStorage.clickCount = Number(localStorage.clickCount) + 10000)
 else alert="wrong Password"
  } 
 
-<p>Count numbers: <output id="result"></output></p>
-<button onclick="startWorker()">Start Worker</button> 
-<button onclick="stopWorker()">Stop Worker</button>
-
-
-<script>
-var Count;
-
-function startWorker() {
-    if(typeof(Worker) !== "undefined") {
-        if(typeof(w) == "undefined") {
-            Count = new Worker("demo_workers.js");
-        }
-        Count.onmessage = function(event) {
-            document.getElementById("result").innerHTML = event.data;
-        };
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
-    }
-}
-
-function stopWorker() { 
-    Count.terminate();
-    Count = undefined;
-}
-</script>
 
 </body>
 </html>
