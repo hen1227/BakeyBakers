@@ -49,6 +49,14 @@ function RBB() {
 <BR>
 <HR width="100%">
 <h2>Store</h2>
+<script>
+    while ( localStorage.clickcount < 1000) {
+    text += "you don't hace enough" + i;
+    i++;
+}
+        
+</script>
+        
 <p1>Cost 1000 cookies</p1>
 <button type="button" onclick="RBB()">For now free Red Background</button>
 <button type="button" onclick="BBB()">For now free Blue Background</button>
@@ -59,7 +67,7 @@ function RBB() {
 Var if localStorage.clickcount == <0 {
 alert ("sorry you dont have enough Cookies");
 
- </script>
+ 
 
 <BR>
 <HR width="100%">
@@ -78,23 +86,32 @@ var password = "MVC";
 if(btoa(document.getElementById('password').value) == password  
 localStorage.clickCount = Number(localStorage.clickCount) + 10000)  
 else alert="wrong Password"
- }  
- 
-<!DOCTYPE htm<bo
+ } 
 
 <p>Count numbers: <output id="result"></output></p>
 <button onclick="startWorker()">Start Worker</button> 
 <button onclick="stopWorker()">Stop Worker</button>
 
-<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
 
 <script>
-var w;
+var Count;
 
+function startWorker() {
+    if(typeof(Worker) !== "undefined") {
+        if(typeof(w) == "undefined") {
+            Count = new Worker("demo_workers.js");
+        }
+        Count.onmessage = function(event) {
+            document.getElementById("result").innerHTML = event.data;
+        };
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+    }
+}
 
 function stopWorker() { 
-    w.terminate();
-    w = undefined;
+    Count.terminate();
+    Count = undefined;
 }
 </script>
 
