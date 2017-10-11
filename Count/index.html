@@ -1,4 +1,16 @@
-#BakeyBakers
+
+
+
+ 
+var i = 0;
+
+function timedCount() {
+    i = i + 1;
+    postMessage(i);
+    setTimeout("timedCount()",500);
+}
+
+ timedCount();#BakeyBakers
 <!DOCTYPE html>
 <html>
 <body>
@@ -27,6 +39,17 @@ function stopWorker() {
     w.terminate();
     w = undefined;
 }
+    
+     
+var i = 0;
+
+function timedCount() {
+    i = i + 1;
+    postMessage(i);
+    setTimeout("timedCount()",500);
+}
+
+ timedCount();
 </script>
 
 </body>
