@@ -4,17 +4,18 @@
 <body>
 
 <p>Count numbers: <output id="result"></output></p>
-<button onclick="startWorker()">Start timer</button> 
-<button onclick="stopWorker()">stop</button>
+<button onclick="startWorker()">Start</button> 
+<button onclick="stopWorker()">Stop</button>
+
 <script>
-var Timer;
+var w;
 
 function startWorker() {
     if(typeof(Worker) !== "undefined") {
-        if(typeof(Timer) == "undefined") {
-            Timer = new Worker("demo_workers.js");
+        if(typeof(w) == "undefined") {
+            w = new Worker("demo_workers.js");
         }
-        Timer.onmessage = function(event) {
+        w.onmessage = function(event) {
             document.getElementById("result").innerHTML = event.data;
         };
     } else {
@@ -23,8 +24,8 @@ function startWorker() {
 }
 
 function stopWorker() { 
-    Timer.terminate();
-    Timer = undefined;
+    w.terminate();
+    w = undefined;
 }
 </script>
 
