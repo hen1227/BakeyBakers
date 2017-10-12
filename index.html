@@ -41,7 +41,7 @@ function RBB() {
 
 <BR>
 <input type ="Password" Name="Password" size="25" maxlength="50" >
-<button onclick="getCookies()">Check password</button> 
+<button onclick="checkPass()">Check password</button> 
 <p><button onclick="clickCounter()" type="button">Click to get cookies</button></p>
 <div id="result"></div>
 <BR>
@@ -79,14 +79,12 @@ alert ("sorry you dont have enough Cookies");
 <h2>You</h2>
     </script>
 <script>
- function getCookies() {  
-var password = "MVC";  
-if(document.getElementById('password').value) == password  
-localStorage.clickCount = Number(localStorage.clickCount) + 10000)  
-else {
-    alert("wrong Password")
- } 
-
+function checkPass() {
+ if (contains(password(document.getElementById('password').value))){
+      localstorage.clickcount = Number(localStorage.clickcount) + 10000     } 
+           } else {
+  alert(" incorrect.");
+ }
 }
     
     </script>
