@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html>
-<script>
+ <script> 
+function clickCounter() { 
+    if(typeof(Storage) !== "undefined") {          if (localStorage.clickcount) { 
+           localStorage.clickcount = Number(localStorage.clickcount)+1; 
+         } else { 
+             localStorage.clickcount = 1; 
+         } 
+         document.getElementById("result").innerHTML = "You have" + localStorage.clickcount + "Cookie(s)"; 
+     } else { 
+         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage..."; 
+     } 
+ } 
+ function RBB() { 
+    document.body.style.backgroundColor = "#ff0000"; 
+  } 
+  function BBB() { 
+     document.body.style.backgroundColor = "#0000cf"; 
+  } 
+   function WBB() { 
+     document.body.style.backgroundColor = "#f0f0f0"; 
+  }  
+  
+     function PBB() { 
+     document.body.style.backgroundColor = "#ff00ff"; 
+  } 
+   function YBB() { 
+    document.body.style.backgroundColor = "#ffff00"; 
+} 
+
 funtion ownsRB(){
 var if ownsRB == "TRUE"
+ document.body.style.backgroundColor = "#ff0000"; 
+ else 
+  alert"sorry, something happend"
 
  }
+ 
+ function ownsRBl() { 
+     if(typeof(Storage) !== "undefined") { 
+         if (localStorage.ownsRBl) { 
+             localStorage.ownsRBl = "TRUE"
+         } else { 
+          localStorage.clickcount = 1; 
+    } 
+       document.getElementById("result").innerHTML = "You have" + localStorage.clickcount + "Cookie(s)"; 
+  } else { 
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage..."; 
+  } 
+} 
+
 
 
 <body>
-
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-
+ <button onclick="ownsRBl" onclick="ownsRB" onclick="RBB" 
+ </script>
 </body>
 </html> 
