@@ -14,6 +14,9 @@ function clickCounter() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
+    
+  
+    
 function RBB() {
     document.body.style.backgroundColor = "#ff0000";
  }
@@ -80,7 +83,7 @@ alert ("sorry you dont have enough Cookies");
     </script>
 <script>
 function checkPass() {
- if (contains(password(document.getElementById('password').value))){
+ if (password == (password(document.getElementById('password').value))){
       localstorage.clickcount = Number(localStorage.clickcount) + 10000     } 
            } else {
   alert(" incorrect.");
