@@ -5,24 +5,6 @@
 
 <script>
     
-var w;
-
-function startWorker() {
-    if(typeof(Worker) !== "undefined") {
-        if(typeof(w) == "undefined") {
-            w = new Worker("demo_workers.js");
-        }
-        w.onmessage = function(event) {
-            document.getElementById("Timeon").innerHTML = event.data;
-        };
-    } else {        document.getElementById("Timeon").innerHTML = "Sorry, your browser does not support Web Workers...";
-    }
-}
-
-function stopWorker() { 
-    w.terminate();
-    w = undefined;
-}
 
 
     function clickCounter() {
@@ -65,8 +47,7 @@ var if localStorage.redbg = TRUE {
 }
     
     
-</script>
-</head>
+</script></head>
 <body>
   
 <h1>BAKEYBAKERS</h1>
@@ -96,7 +77,7 @@ var if localStorage.redbg = TRUE {
 <button type="button" onclick="PBB()" onclick="backgroung_purcheser">For now free Magenta Background</button>
 <button type="button" onclick="YBB()" onclick="backgroung_purcheser">For now free Yellow Background</button>
 <button type="button" onclick="WBB()" onclick="backgroung_purcheser">Back to White Background</button>
-<script>
+
 
 
  
@@ -111,17 +92,17 @@ var if localStorage.redbg = TRUE {
 <BR>
 <HR width="100%">
 <h2>You</h2>
-    </script>
+   
 <script>
 function checkPass() {
- if (password == (password(document.getElementById('password').value))){
+ if (password == (password(document.getElementById('password').value)))
       localstorage.clickcount = Number(localStorage.clickcount) + 10000     } 
            } else {
   alert(" incorrect.");
  }
 }
     
-    </script>
+</script>
     
 </body>
 
