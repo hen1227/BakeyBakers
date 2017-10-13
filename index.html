@@ -18,7 +18,8 @@ function clickCounter() {
   
     
 function RBB() {
-    document.body.style.backgroundColor = "#ff0000";
+    document.body.style.backgroundColor = "#ff0000"
+ localStorage.redbg = TRUE;    
  }
  function BBB() {
     document.body.style.backgroundColor = "#0000cf";
@@ -35,8 +36,11 @@ function RBB() {
   function backgroung_purcheser() {
   localStorage.clickcount = Number(localStorage.clickcount)-1000;
 }
-    
  
+if localStorage.redbg = TRUE {
+    document.body.style.backgroundColor = "#ff0000";
+    
+    
 </script>
 </head>
 
@@ -54,10 +58,10 @@ function RBB() {
 <HR width="100%">
 <h2>Store</h2>
 <script>
-    while ( localStorage.clickcount < 1000) {
-    text = "you have enough";
+    while ( localStorage.clickcount > 999) {
+   <p1>"you have enough"</p1>
     else {
-        text ="you do't have enough"
+<p1>"you have enough"</p1>
 }
         
 </script>
