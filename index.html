@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<p>You have been on for <output id="result"></output>seconds</p>
+<p>You have been on for <output id="Timeon"></output>seconds</p>
 <script>
     window.onload { 
       startWorker();
@@ -15,10 +15,10 @@ function startWorker() {
             w = new Worker("demo_workers.js");
         }
         w.onmessage = function(event) {
-            document.getElementById("result").innerHTML = event.data;
+            document.getElementById("Timeon").innerHTML = event.data;
         };
     } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+        document.getElementById("Timeon").innerHTML = "Sorry, your browser does not support Web Workers...";
     }
 }
 
