@@ -1,7 +1,5 @@
 
-function timetocookie() {
-    setTimeout(function(){ alert("you have been on for 10 seconds"); }, 100);
-}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +7,7 @@ function timetocookie() {
 
 <script>
      function clickCounter() {
-function timetocookie() {
-    setTimeout(function(){ alert("you have been on for 10 seconds"); }, 100);
-}    if(typeof(Storage) !== "undefined") {
+    if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
         } else {
