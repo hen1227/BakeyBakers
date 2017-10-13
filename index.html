@@ -2,11 +2,9 @@
 <html>
 <head>
 
-<p>You have been on for <output id="Timeon"></output>seconds</p>
 <script>
-    window.onload { 
-      startWorker();
-    }
+
+    
 var w;
 
 function startWorker() {
@@ -17,8 +15,7 @@ function startWorker() {
         w.onmessage = function(event) {
             document.getElementById("Timeon").innerHTML = event.data;
         };
-    } else {
-        document.getElementById("Timeon").innerHTML = "Sorry, your browser does not support Web Workers...";
+    } else {        document.getElementById("Timeon").innerHTML = "Sorry, your browser does not support Web Workers...";
     }
 }
 
@@ -27,7 +24,8 @@ function stopWorker() {
     w = undefined;
 }
 <script>
-function clickCounter() {
+
+    function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
@@ -70,6 +68,7 @@ var if localStorage.redbg = TRUE {
 </script>
 </head>
 <body>
+  
 <h1>BAKEYBAKERS</h1>
 
 <p1>MVP(10,000)cookies</p1>
@@ -88,7 +87,7 @@ var if localStorage.redbg = TRUE {
     else {
 <p1>"you have enough"</p1>
 }
-        
+ if        
 </script>
         
 <p1>Cost 1000 cookies</p1>
