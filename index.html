@@ -13,10 +13,7 @@
         } else {
             localStorage.clickcount = 1;
        }
-        document.getElementById("result").innerHTML = "You have" + localStorage.clickcount + "Cookie(s)";
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
+        
 }  
   
     
@@ -74,7 +71,8 @@ var if localStorage.redbg = TRUE {
     else {
 <p1>"you have enough"</p1>
 }
-
+document.getElementById("result").innerHTML = "You have" + localStorage.clickcount + "Cookie(s)";
+    
 </script>
     <BR>
 
