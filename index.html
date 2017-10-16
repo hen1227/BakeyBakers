@@ -12,14 +12,14 @@
             localStorage.clickcount = Number(localStorage.clickcount)+1;
         } else {
             localStorage.clickcount = 1;
-       }
-         {
-     document.getElementById("result").innerHTML = "You have" + localStorage.clickcount + "Cookie(s)";
-         }
-}  
-  
-    
-  
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+
+
      
 function RBB() {
     document.body.style.backgroundColor = "#ff0000"
@@ -84,7 +84,7 @@ var if localStorage.redbg = TRUE {
 <h2>Store</h2>
 
 <BR>
-     <button onclick="clickCounter()">click for cookies</button>
+  <button onclick="clickCounter()" type="button">Cookies</button>
         <BR>
 <button onclick="timetocookie()">when you click this button you will get cookies in 100 seconds</button>
       <BR>
