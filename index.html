@@ -17,10 +17,11 @@
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
-}
-<    
+}  
   
     
+  
+     
 function RBB() {
     document.body.style.backgroundColor = "#ff0000"
  localStorage.redbg = TRUE;    
@@ -68,7 +69,6 @@ var if localStorage.redbg = TRUE {
 <BR>
 <HR width="100%">
 <h2>Store</h2>
-<script>
     while ( localStorage.clickcount > 999) {
    <p1>"you have enough"</p1>
     else {
@@ -84,7 +84,7 @@ var if localStorage.redbg = TRUE {
 <h2>Store</h2>
 
 <BR>
-<button onclick="timetocookie()">After 100 seconds of clicking this button you will get cookies</button>
+<button onclick="timetocookie()">when you click this button you will get cookies in 100 seconds</button>
       <BR>
 <BR>
 
@@ -118,7 +118,7 @@ var if localStorage.redbg = TRUE {
 <script>
 function checkPass() {
  if (password == (password(document.getElementById('password').value)))
-      localstorage.clickcount = Number(localStorage.clickcount) + 10000     } 
+      localstorage.clickcount = Number(localStorage.clickcount) += 10000     } 
            } else {
   alert(" incorrect.");
  }
