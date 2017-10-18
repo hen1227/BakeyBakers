@@ -4,20 +4,17 @@
 
 
 <script>
+    funtion Cookieonetwothree()
     
-     function clickCounter() {
+    
+    
+     Var clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
-        } else {
-            localStorage.clickcount = 1;
+            localStorage.clickcount = Number(localStorage.clickcount)=1;
         }
-        document.getElementById("result").innerHTML = "You have  " + localStorage.clickcount + " Cookies";
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
-}
-
+ }
 
      
 function RBB() {
@@ -32,10 +29,6 @@ function RBB() {
     document.body.style.backgroundColor = "#f0f0f0";
  } 
     
-function timetocookie() {
-    setTimeout(function()
-               { alert("you have been on for 10 seconds"); }, 100);
-}
 
     function PBB() {
     document.body.style.backgroundColor = "#ff00ff";
@@ -85,16 +78,17 @@ var if localStorage.redbg = TRUE {
 
 <BR>
   <button onclick="clickCounter()" type="button">Cookies</button>
-        <BR>
+        <BR><script>
+function countdown() {
+    setTimeout(function(){ alert("Hello"); }, 1000);
+}
+</script>
             <div class="container">
-  <h2>Animated Progress Bar</h2>
-  <p>The .active class animates the progress bar:</p> 
   <div class="progress">
-    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" 
-         style="width:2%">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:2%">
       2%
     </div>
-<button onclick="timetocookie()">when you click this button you will get cookies in 100 seconds</button>
+<button onclick="countdown()">when you click this button you will get cookies in 100 seconds</button>
       <BR>
 <BR>
 
