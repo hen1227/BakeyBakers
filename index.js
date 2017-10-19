@@ -8,6 +8,16 @@ function clickCounter() {
         document.getElementById("result").innerHTML = "You have " + localStorage.clickcount + " cookie(s).";
     }
 }
+function clickCounterone() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1000;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have " + localStorage.clickcount + " cookie(s).";
+    }
+}
 function RBB() {
     document.body.style.backgroundColor = "#ff0000"   
 }
