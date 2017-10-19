@@ -1,8 +1,13 @@
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-       localStorage.clickcount = 1;
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
         }
+        document.getElementById("result").innerHTML = "You have " + localStorage.clickcount + " cookie(s).";
     }
+}
 function RBB() {
     document.body.style.backgroundColor = "#ff0000"   
 }
