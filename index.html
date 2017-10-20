@@ -12,9 +12,19 @@ function clickCounter() {
         } else {
             localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        document.getElementById("result").innerHTML = "You have " + localStorage.clickcount + " COOKIE(s).";
     } 
 }
+         function clickCounterone() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1000;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have " + localStorage.clickcount + " COOKIE(s).";
+    } 
+} 
      </script>
   
 <h1>BAKEYBAKERS</h1>
