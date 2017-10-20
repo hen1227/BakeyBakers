@@ -14,16 +14,23 @@ function clickCounter() {
         }
         document.getElementById("result").innerHTML = "You have " + localStorage.clickcount + " COOKIE(s).";
     } 
-}
-         function clickCounterone() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1000;
-        } else {
-            localStorage.clickcount = 1;
-        }
-    } 
 } 
+          
+           function rolldie() {
+                var die == math.ceil(Math.random() * 6);
+                if die == 1) {
+                     alert("you got a one");
+                }else if die == 2) {
+                     alert("you got a two");
+                }else if die == 3) {
+                     alert("you got a three");
+                }else if die == 4) {
+                     alert("you got a four");
+                }else if die == 5) {
+                     alert("you got a five");
+                }else if die == 6) {
+                     alert("you got a six");  
+          
      </script>
   
 <h1>BAKEYBAKERS</h1>
@@ -35,11 +42,11 @@ function clickCounter() {
 <h2>Store</h2>
 
 <BR>
-  <button onclick="clickCounter()">Cookies</button>
+  <button onclick="rolldie()">Cookies</button>
         <BR>
              <script>
 function countdown() {
-   setTimeout(function(){ alert("you got 1000 cookies"); }, 1);
+   setTimeout(function(){ alert("you got 1000 cookies"); }, 10000);
 }
 </script>
          <BR>
