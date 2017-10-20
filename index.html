@@ -8,7 +8,7 @@
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
+            localStorage.clickcount = Number(localStorage.clickcount)+100;
         } else {
             localStorage.clickcount = 1;
         }
@@ -22,7 +22,6 @@ function clickCounter() {
         } else {
             localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "You have " + localStorage.clickcount + " COOKIE(s).";
     } 
 } 
      </script>
@@ -40,7 +39,7 @@ function clickCounter() {
         <BR>
              <script>
 function countdown() {
-   setTimeout(clickCounterone(){ alert("you got 1000 cookies"); }, 1);
+   setTimeout(function(){ alert("you got 1000 cookies"); }, 1);
 }
 </script>
          <BR>
