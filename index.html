@@ -13,33 +13,10 @@
   background-color: #4CAF50;
 }
 </style>
-<script>
-</script>
 <body>
 
-<h1>JavaScript Progress Bar</h1>
-
-<div id="myProgress">
-  <div id="myBar"></div>
-</div>
-
-<br>
-<button onclick="move()">Click Me</button> 
-
 <script>
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
+
 
  
           function clickCounter() {
@@ -113,12 +90,31 @@ function RBB() {
         <BR>
              <script>
 function countdown() {
-   setTimeout(function(){ alert("you got 1000 cookies"); }, 10000);
+      setTimeout(function(){ alert("you got 1000 cookies");  }, 10000);
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+  
 }
 </script>
          <BR>
           <h3>when you click this button you will get cookies in 100 seconds</h3>
          <BR>
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<br>
 <button onclick="countdown()">1000 Cookies in 100 seconds</button>
       <BR>
 <BR>
