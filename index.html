@@ -16,7 +16,20 @@
 <body>
 
 <script>
-
+function Move() {
+ var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+  
 
  
           function clickCounter() {
@@ -91,19 +104,6 @@ function RBB() {
              <script>
 function countdown() {
       setTimeout(function(){ alert("you got 1000 cookies");  }, 10000);
-  var elem = document.getElementById("myBar");   
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
-  
 }
 </script>
          <BR>
@@ -115,7 +115,7 @@ function countdown() {
 </div>
 
 <br>
-<button onclick="countdown()">1000 Cookies in 100 seconds</button>
+<button onclick="Move()" onclick="countdown()">1000 Cookies in 100 seconds</button>
       <BR>
 <BR>
 
