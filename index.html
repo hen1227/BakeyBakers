@@ -16,36 +16,12 @@
 <body>
 
 <script>
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
-  
 
  
           function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
-        } else {
-            localStorage.clickcount = 1;
-        }
-        document.getElementById("result").innerHTML = "You have " + localStorage.clickcount + " cookie(s).";
-    }
-}
-function clickCounterone() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1000;
         } else {
             localStorage.clickcount = 1;
         }
@@ -105,7 +81,9 @@ function RBB() {
 function countdown() {
       setTimeout(function(){ alert("you got 1000 cookies");  }, 10000);
 }
+                  
 </script>
+             
          <BR>
           <h3>when you click this button you will get cookies in 100 seconds</h3>
          <BR>
@@ -114,6 +92,24 @@ function countdown() {
   <div id="myBar"></div>
 </div>
 
+<br>
+<button onclick="move()">Click Me</button> 
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
 <br>
               <button onclick="move()">Test</button> 
               <BR>
