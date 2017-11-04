@@ -99,7 +99,7 @@ function countdown() {
 function move() {
   var elem = document.getElementById("myBar");   
   var width = 1;
-  var id = setInterval(frame, 10);
+  var id = setInterval(frame, 1000);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
@@ -111,8 +111,6 @@ function move() {
 }
 </script>
 <br>
-          
-<button onclick="Move()" onclick="countdown()">1000 Cookies in 100 seconds</button>
       <BR>
 <BR>
 
