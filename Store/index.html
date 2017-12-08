@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
-
- <script>
-   function load() {
+  <script>
+function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-            localStorage.food = 1;
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
         }
-    document.getElementById("result").innerHTML = "You have  " + localStorage.food + " food(s).";
-   }
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
    
-   funcion buyfood() {
-  localstorage.food + 5
+   function buyfood() {
+  localstorage.clickcount + 5
    }
-    funcion feedfood() {
-  localstorage.food - 25
+    function feedfood() {
+  localstorage.clickcount - 25
    }
    
    
   </script>
 <head>
      </head>
-<body onload="load()">
+<body onload="clickCounter()">
   <button onclick="buyfood">Buy Food</button>
+ <h4 id="result">You have no food></h4>
 </body>
 </html>
