@@ -4,8 +4,9 @@
  <script>
    function load() {
     if(typeof(Storage) !== "undefined") {
-            localStorage.clickcount = 1;
+            localStorage.food = 1;
         }
+    document.getElementById("result").innerHTML = "You have  " + localStorage.food + " food(s).";
    }
    
    funcion buyfood() {
