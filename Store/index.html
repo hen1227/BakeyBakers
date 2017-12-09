@@ -27,7 +27,13 @@ function clickCounter() {
 }
    
    function buyfood() {
-  localstorage.clickcount + 5
+      if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+           } else {
+            localStorage.clickcount = 1;
+        }
+      }
    }
     
     function feedfood() {
