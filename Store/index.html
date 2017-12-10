@@ -3,12 +3,12 @@
   <script>
 function Buyfood() {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+5;
+        if (localStorage.clickcountFood) {
+            localStorage.clickcountFood = Number(localStorage.clickcountFood)+5;
         } else {
-            localStorage.clickcount = 1;
+            localStorage.clickcountFood = 1;
         }
-        document.getElementById("result").innerHTML = "You have  " + localStorage.clickcount + " bags of food.";
+        document.getElementById("result").innerHTML = "You have  " + localStorage.clickcountFood + " bags of food.";
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
