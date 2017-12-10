@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <script>
+    while haveoven == false {
+      
+    }
 function Buyfood() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcountfood) {
@@ -49,6 +52,15 @@ function Buyfood() {
         document.getElementById("result").innerHTML = "You have  " + localStorage.clickcount + " bags of food.";
       }
    }
+    
+    function buyoven() {
+     if(typeof(Storage) !== "undefined") {
+        if (localStorage.haveoven) {
+            localStorage.haveoven = (localStorage.haveoven == true);
+        }
+        }
+      
+    }
    
    
   </script>
