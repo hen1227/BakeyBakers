@@ -36,8 +36,15 @@ function clickCounter() {
       }
    }
     
-    function feedfood() {
-  localstorage.clickcount - 25
+      function feedfood() {
+      if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)-25;
+           } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have  " + localStorage.clickcount + " bags of food.";
+      }
    }
    
    
