@@ -2,7 +2,7 @@
 <html>
   <script>
     while localstorage.haveoven == true {
-    setTimeout((){ alert("Hello"); }, 300);
+    setTimeout({ alert("Your oven has just produced 1000 cookies"); }, 100000);
 }
 function Buyfood() {
     if(typeof(Storage) !== "undefined") {
@@ -55,9 +55,7 @@ function Buyfood() {
     
     function buyoven() {
      if(typeof(Storage) !== "undefined") {
-        if (localStorage.haveoven) {
             localStorage.haveoven = (localStorage.haveoven == true);
-        }
         }
       
     }
