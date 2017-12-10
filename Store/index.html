@@ -3,12 +3,12 @@
   <script>
 function Buyfood() {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcountFood) {
-            localStorage.clickcountFood = Number(localStorage.clickcountFood)+5;
+        if (localStorage.clickcountfood) {
+            localStorage.clickcountfood = Number(localStorage.clickcountfood)+5;
         } else {
-            localStorage.clickcountFood = 1;
+            localStorage.clickcountfood = 1;
         }
-        document.getElementById("result").innerHTML = "You have  " + localStorage.clickcountFood + " bags of food.";
+        document.getElementById("result").innerHTML = "You have  " + localStorage.clickcountfood + " bags of food.";
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
@@ -38,17 +38,7 @@ function Buyfood() {
     }
 }
     
-   
-   function buyfood() {
-      if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+5;
-           } else {
-            localStorage.clickcount = 1;
-        }
-      }
-   }
-    
+  
       function feedfood() {
       if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
@@ -69,7 +59,7 @@ function Buyfood() {
    <button><a href="https://hen1227.github.io/BakeyBakers/">Go Home</a></button>
    <button><a href="https://hen1227.github.io/BakeyBakers/Pets/">Go see my pet</a></button>
   <BR>
-  <button onclick="buyfood">Buy Food</button>
+  <button onclick="buyfood()">Buy Food</button>
  <h4 id="result">You have no food</h4>
 </body>
 </html>
