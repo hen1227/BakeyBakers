@@ -8,9 +8,9 @@ function Buyfood() {
         } else {
             localStorage.clickcountfood = 1;
         }
-        document.getElementById("result").innerHTML = "You have  " + localStorage.clickcountfood + " bags of food.";
+        document.getElementById("Foodhave").innerHTML = "You have  " + localStorage.clickcountfood + " bags of food.";
     } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById("Foodhave").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
     function clickCounterPoints() {
@@ -60,6 +60,6 @@ function Buyfood() {
    <button><a href="https://hen1227.github.io/BakeyBakers/Pets/">Go see my pet</a></button>
   <BR>
   <button onclick="buyfood()">Buy Food</button>
- <h4 id="result">You have no food</h4>
+ <h4 id="Foodhave">You have no food</h4>
 </body>
 </html>
