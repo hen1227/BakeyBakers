@@ -1,65 +1,28 @@
 <!DOCTYPE html>
 <html>
   <script>
-    while localstorage.haveoven == true {
+    while localstorage.haveoven = true {
     setTimeout({ alert("Your oven has just produced 1000 cookies"); }, 100000);
 }
 function Buyfood() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcountfood) {
             localStorage.clickcountfood = Number(localStorage.clickcountfood)+5;
-        } else {
-            localStorage.clickcountfood = 1;
         }
-        document.getElementById("Foodhave").innerHTML = "You have  " + localStorage.clickcountfood + " bags of food.";
-    } else {
-        document.getElementById("Foodhave").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-    function clickCounterPoints() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcountpoints) {
-            localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
-        } else {
-            localStorage.clickcountpoints = 1;
+
+    function extra() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
         }
-        document.getElementById("Points").innerHTML = "You have  " + localStorage.clickcountpoints + " Points";
-    } else {
-        document.getElementById("Points").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
     
     function losePoints() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcountpoints) {
-            localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10;
-        } else {
-            localStorage.clickcountpoints = 1;
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10;
         }
-    } else {
-        document.getElementById("Points").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
     
-  
-      function feedfood() {
-      if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount) - 25;
-           } else {
-            localStorage.clickcount = 1;
-        }
-        document.getElementById("result").innerHTML = "You have  " + localStorage.clickcount + " bags of pet food.";
-      }
-   }
-    
+ function clickCounterPoints() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
+        } 
+      
     function buyoven() {
-     if(typeof(Storage) !== "undefined") {
-            localStorage.haveoven = (localStorage.haveoven == true);
+   localStorage.clickcountpoints = (localStorage.clickcountpoints) = true;
         }
-      document.getElementById("ovenhave").innerHTML = "You have purchesed this item";
-    }
-   
    
   </script>
 <head>
