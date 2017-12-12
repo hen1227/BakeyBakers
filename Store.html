@@ -19,7 +19,7 @@ function Buyfood() {
     function clickCounterPoints() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcountpoints) {
-            localStorage.clickcountpoints = Number(localStorage.clickcountpoints)+1;
+            localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
         } else {
             localStorage.clickcountpoints = 1;
         }
@@ -32,7 +32,7 @@ function Buyfood() {
     function losePoints() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcountpoints) {
-            localStorage.clickcountpoints = Number(localStorage.clickcountpoints)-10;
+            localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10;
         } else {
             localStorage.clickcountpoints = 1;
         }
@@ -45,7 +45,7 @@ function Buyfood() {
       function feedfood() {
       if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)-25;
+            localStorage.clickcount = Number(localStorage.clickcount) - 25;
            } else {
             localStorage.clickcount = 1;
         }
@@ -57,7 +57,7 @@ function Buyfood() {
      if(typeof(Storage) !== "undefined") {
             localStorage.haveoven = (localStorage.haveoven == true);
         }
-      document.getElementById("Foodhave").innerHTML = "You have purchesed this item";
+      document.getElementById("ovenhave").innerHTML = "You have purchesed this item";
     }
    
    
@@ -69,7 +69,7 @@ function Buyfood() {
    <button><a href="https://hen1227.github.io/BakeyBakers/">Go Home</a></button>
    <button><a href="https://hen1227.github.io/BakeyBakers/Pets/">Go see my pet</a></button>
   <BR>
-  <button onclick="buyfood()">Buy pet Food</button>
+  <button onclick="losePoints()" onclick="buyfood()">Buy pet Food</button>
  <h4 id="Foodhave">You have no bags of pet food</h4>
     <button onclick="buyoven()">Buy Oven</button>
      <h4 id="ovenhave">You do not have this item yet</h4>
