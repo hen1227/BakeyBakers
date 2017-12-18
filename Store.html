@@ -6,22 +6,22 @@
 }
 function Buyfood() {
             localStorage.clickcountfood = Number(localStorage.clickcountfood)+5;
+ document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
         }
 
     function extra() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
+      document.getElementById("points").innerHTML = localStorage.clickcountpoints;  
         }
     
     function losePoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10;
         }
-    
- function clickCounterPoints() {
-   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
-        } 
+   
       
     function buyoven() {
-   localStorage.clickcountpoints = (localStorage.clickcountpoints) = true;
+   localStorage.oven = (localStorage.oven) = true;
+       document.getElementById("haveoven").innerHTML = localStorage.oven; 
         }
   
   </script>
