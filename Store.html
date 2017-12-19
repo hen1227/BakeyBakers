@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <script>
-    while localstorage.haveoven = true {
-    setTimeout({ alert("Your oven has just produced 1000 cookies"); }, 100000);
+    function bakecookies() { 
+  if (localstorage.haveoven == true) {
+    setTimeout(alert("Your oven has just produced 1000 cookies"), 100000);
 }
 function Buyfood() {
             localStorage.clickcountfood = Number(localStorage.clickcountfood)+5;
