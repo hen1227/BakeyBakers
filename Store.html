@@ -12,7 +12,6 @@
   function Startload() {
    document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
    document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
-   
    if localStorage.oven == true; {
        document.getElementById("haveoven").innerHTML = "You Have purchased this item"; 
         }
@@ -26,14 +25,14 @@
     }
      
 function buyfood() {
-            localStorage.clickcountfood = Number(localStorage.clickcountfood)+5;
+            localStorage.clickcountfood = Number(localStorage.clickcountfood) + 5;
  document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
   losePoints();
         }
 
     function clickcounterpoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
-    document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
+    document.getElementById("Points").innerHTML = localStorage.clickcountpoints; 
         }
     
     function losePoints() {
