@@ -10,13 +10,14 @@
   if (localstorage.haveoven == true) {
     setTimeout(alert("Your oven has just produced 1000 cookies"), 100000);
 }
-function Buyfood() {
+     
+function buyfood() {
             localStorage.clickcountfood = Number(localStorage.clickcountfood)+5;
  document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
   losePoints();
         }
 
-    function extra() {
+    function clickcounterpoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
       document.getElementById("points").innerHTML = localStorage.clickcountpoints;  
         }
@@ -34,14 +35,14 @@ function Buyfood() {
   </script>
 <head>
      </head>
-<body onload="clickCounterPoints()">
+<body onload="clickcounterpoints()">
   <center>
   <h2 id="Points">You have no Points</h2>
    <button><a href="https://hen1227.github.io/BakeyBakers/">Go Home</a></button>
    <button><a href="https://hen1227.github.io/BakeyBakers/Pets.html">Go see my pet</a></button>
   <BR>
   <button onclick="buyfood()">Buy pet Food</button>
- <h4 id="Foodhave">You have no bags of pet food</h4>
+ <h4 id="havefood">You have no bags of pet food</h4>
     <button onclick="buyoven()">Buy Oven</button>
      <h4 id="haveoven">You do not have this item yet</h4>
  
