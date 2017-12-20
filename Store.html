@@ -46,7 +46,7 @@ function cookiesbaked() {
   
 function buyfood() {
  localStorage.clickcountfood = Number(localStorage.clickcountfood) + 5;
- document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
+ document.getElementById("food").innerHTML = localStorage.clickcountfood; 
   losePoints();
         }
 
@@ -78,7 +78,7 @@ function buyfood() {
   <BR>
   <button class="BakeyBakersbutton" onclick="buyfood()">Buy pet Food</button>
    
- <h4 id="havefood">You have no bags of pet food</h4>
+ <h4 id="food">You have no bags of pet food</h4>
    
     <button class="BakeyBakersbutton" onclick="buyoven()">Buy Oven</button>
    
