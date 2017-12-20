@@ -33,7 +33,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
  <script>
   
   function bakecookies() { 
-  if (localstorage.haveoven == true) {
+  if (localStorage.haveoven == true) {
     setTimeout(alert("Your oven has just produced 1000 cookies"), 1000);
      }
    cookiesbaked();
@@ -44,7 +44,7 @@ function cookiesbaked() {
  }
   
 function buyfood() {
-            localStorage.clickcountfood = Number(localStorage.clickcountfood) + 5;
+ localStorage.clickcountfood = Number(localStorage.clickcountfood) + 5;
  document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
   losePoints();
         }
