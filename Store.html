@@ -66,6 +66,7 @@ function buyfood() {
         }
       
     function buyoven() {
+     if (localStorage.clickcountpoints > 1000) {
    localStorage.oven = true;
        document.getElementById("haveoven").innerHTML = "You Have purchased this item"; 
      if (localStorage.haveoven == true) {
@@ -73,7 +74,10 @@ function buyfood() {
      } else {
     loselotPoints();
      }
+     } else {
+      document.getElementById("haveoven").innerHTML = "You Do not Have enough purchased this item";
         }
+    }
 
   </script>
 <head>
