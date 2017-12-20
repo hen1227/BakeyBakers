@@ -35,13 +35,11 @@ function buyfood() {
    localStorage.oven == true;
        document.getElementById("haveoven").innerHTML = "You Have purchased this item"; 
         }
-  
+
   </script>
 <head>
      </head>
-<body onload=" if localStorage.oven == true;  {
-       document.getElementById("haveoven").innerHTML = "You Have purchased this item"; 
-        }">
+<body onload="document.getElementById("Points").innerHTML = localStorage.clickcountpoints; ">
   <center>
   <h2 id="Points">You have no Points</h2>
    <button style="cookiebutton" onclick="clickcounterpoints()">Cookie</button>
