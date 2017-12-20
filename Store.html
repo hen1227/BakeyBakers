@@ -68,7 +68,11 @@ function buyfood() {
     function buyoven() {
    localStorage.oven = true;
        document.getElementById("haveoven").innerHTML = "You Have purchased this item"; 
-     loselotPoints();
+     if (localStorage.haveoven == true) {
+      document.getElementById("haveoven").innerHTML = "You Have already purchased this item";
+     } else {
+    loselotPoints();
+     }
         }
 
   </script>
