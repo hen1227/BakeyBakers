@@ -57,8 +57,13 @@ function buyfood() {
     
     function losePoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10;
+      document.getElementById("Points").innerHTML = localStorage.clickcountpoints; 
         }
-   
+  
+   function loselotPoints() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 1000;
+      document.getElementById("Points").innerHTML = localStorage.clickcountpoints; 
+        }
       
     function buyoven() {
    localStorage.oven = true;
