@@ -36,8 +36,13 @@ background: url(cookie.png) 0 0 transparent;
   if (localstorage.haveoven == true) {
     setTimeout(alert("Your oven has just produced 1000 cookies"), 100000);
      }
+   cookiesbaked();
     }
      
+function cookiesbaked() {
+  localStorage.clickcountfood = Number(localStorage.clickcountfood) + 1000;
+ }
+  
 function buyfood() {
             localStorage.clickcountfood = Number(localStorage.clickcountfood) + 5;
  document.getElementById("havefood").innerHTML = localStorage.clickcountfood; 
