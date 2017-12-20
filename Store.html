@@ -8,9 +8,7 @@
    
  </style>
  <script>
-  While localStorage.oven == true;  {
-       document.getElementById("haveoven").innerHTML = "You Have purchased this item"; 
-        }
+
     function bakecookies() { 
   if (localstorage.haveoven == true) {
     setTimeout(alert("Your oven has just produced 1000 cookies"), 100000);
@@ -41,7 +39,9 @@ function buyfood() {
   </script>
 <head>
      </head>
-<body onload="clickcounterpoints()">
+<body onload=" if localStorage.oven == true;  {
+       document.getElementById("haveoven").innerHTML = "You Have purchased this item"; 
+        }">
   <center>
   <h2 id="Points">You have no Points</h2>
    <button style="cookiebutton" onclick="clickcounterpoints()">Cookie</button>
