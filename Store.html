@@ -32,6 +32,11 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
    
  </style>
  <script>
+    function clickcountpoints() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
+    document.getElementById("Points").innerHTML = localStorage.clickcountpoints; 
+        }  
+  
      function losePoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10; 
         }
@@ -53,11 +58,6 @@ function buyfood() {
  localStorage.clickcountfood = Number(localStorage.clickcountfood) + 5;
  document.getElementById("food").innerHTML = localStorage.clickcountfood; 
   losePoints();
-        }
-
-    function clickcountpoints() {
-   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
-    document.getElementById("Points").innerHTML = localStorage.clickcountpoints; 
         }
  
    function loselotPoints() {
