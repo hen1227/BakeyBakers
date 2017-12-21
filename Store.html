@@ -32,17 +32,22 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
    
  </style>
  <script>
+     function losePoints() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10; 
+        }
+   
   
-  function bakecookies() { 
-  if (localStorage.haveoven == true) {
-    setTimeout(alert("Your oven has just produced 1000 cookies"), 1000);
-     }
-   cookiesbaked();
-    }
-     
-function cookiesbaked() {
+  function cookiesbaked() {
   localStorage.clickcountfood = Number(localStorage.clickcountfood) + 1000;
  }
+
+  function bakecookies() {  
+  if (localStorage.haveoven == true) {
+    setTimeout(function() {alert("Your oven has just produced 1000 cookies")}, 1000);
+     }
+ cookiesbaked();  
+    }
+     
   
 function buyfood() {
  localStorage.clickcountfood = Number(localStorage.clickcountfood) + 5;
@@ -54,11 +59,7 @@ function buyfood() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
     document.getElementById("Points").innerHTML = localStorage.clickcountpoints; 
         }
-    
-    function losePoints() {
-   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10; 
-        }
-  
+ 
    function loselotPoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 1000; 
         }
