@@ -1,197 +1,187 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* Variabes */  
+$orange: #ffa600;
+$green: #c1d72e;
+$blue: #82d2e5;
+$grey:#f3f3f3;
+$white: #fff;
+$base-color:$green ;
+
+/* Mixin's */ 
+
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin clear {
+  &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+ @mixin box-size {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ @mixin transition {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin fade {
+  -moz-transition: all 1s ease-in;
+  -moz-transition:all 0.3s ease-in-out;
+  -webkit-transition:all 0.3s ease-in-out;
+}
+
+@mixin opacity {
+  opacity:0.4;
+  filter:alpha(opacity=40); 
+  @include fade;
+}
+
+@mixin corners ($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius; 
+  -khtml-border-radius: $radius; 
+}
+
 body {
-  margin-top: 25px;
-  font-size: 21px;
-  text-align: center;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
-  font-family: 'Open Sans', serif;
+  background:$base-color;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  color:$white;
+  height:100%;
+  text-align:center;
+  font-size:18px;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.wrappper{
+  @include clear;
+  width:100%;
+  margin:0 auto;
 }
 
-@-moz-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+
+canvas{
+  color:$white;
+  border: $white dashed 2px;
+  padding:15px;
 }
 
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-input {
-  width: 200px;
-  font-size: 14pt;
-}
-
-a {
-  color: #3399ff;
-  text-decoration: none;
+h1, h2, h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+   margin:5px 0;
 }
 
 h1 {
-  font-size: 50px;
+	font-size: 2.6em;
 }
 
-.top {
-  background-color: black;
-  text-indent: 35px;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
+h2 {
+	font-size: 1.6em;
+}
+
+p{
+  font-size: 1.6em;
+}
+
+#alphabet {
+  @include clear;
+  margin:15px auto;
+  padding:0;
+  max-width:900px;
+}
+
+#alphabet li {
+  float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:35px;
+  height:30px;
+  padding-top:10px;
+  background:$white;
+  color:$base-color;
+  cursor:pointer;
+  @include corners(5px);
+  border: solid 1px $white;
+    
+    &:hover{
+      background:$base-color;
+      border: solid 1px $white;
+      color:$white;
+    }
+}
+
+#my-word {
   margin: 0;
+  display: block;
   padding: 0;
+  display:block;
 }
 
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-  box-shadow: 3px 5px 5px #888888;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-.div-wrapper {
+#my-word li {
   position: relative;
-  height: auto;
-  width: 125px;
-}
-
-.div-wrapper img {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.background {
-  background-color: #42f4b6;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 97;
+  list-style: none;
   margin: 0;
-  padding: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
 }
 
-textarea:focus,
-input:focus {
+.active {
+  @include opacity;
+  cursor:default;
+    
+  &:hover{
+      @include fade;
+      @include opacity;
+    }
+}
+
+#mylives{
+  font-size:1.6em;
+  text-align:center;
+  display:block;
+}
+
+button{
+  @include corners (5px);
+  background:$base-color;
+  color:$white;
+  border: solid 1px $white;
+  text-decoration:none;
+  cursor:pointer;
+  font-size:1.2em;
+  padding:18px 10px;
+  width:180px;
+  margin: 10px;
   outline: none;
+  
+    &:hover{
+      @include transition;
+      background:$white;
+      border: solid 1px $white;
+      color:$base-color;
+    }
 }
 
-input[type=text],
-input[type=password],
-input[type=number],
-textarea {
-  width: 20%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
+@media (max-width: 767px) {
+  #alphabet {
+  padding:0 0 0 15px;
 }
+  }
 
-input[type=text]:hover,
-input[type=text]:focus,
-input[type=password]:hover,
-input[type=password]:focus,
-input[type=number]:hover,
-input[type=number]:focus,
-textarea:focus,
-textarea:hover {
-  width: 20%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #3399ff;
-  border-radius: 5px;
-  box-sizing: border-box;
+  @media (max-width: 480px) {
+  #alphabet {
+  padding:0 0 0 25px;
 }
-
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-}
-
-.base {
-  background-color: #000000;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.btn {
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-}
-
-.btn2 {
-  background-color: #555555;
-  color: white;
-  border: 2px solid #555555;
-}
-
-.btn:hover {
-  background-color: #555555;
-  color: white;
-}
-
-.nobullet {
-  list-style-type: none;
-}
+  }
