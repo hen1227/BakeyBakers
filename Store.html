@@ -54,11 +54,20 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
     }
      
   
-function buyfood() {
- localStorage.food = Number(localStorage.food) + 5;
- document.getElementById("food").innerHTML = localStorage.food; 
-  losePoints();
+      
+    function buyfood() {
+     if (localStorage.clickcountpoints > 15) {
+     if (localStorage.haveoven == true) {
+      document.getElementById("haveoven").innerHTML = "You Have already purchased this item";
+     } else {
+     localStorage.oven = true;
+       document.getElementById("haveoven").innerHTML = "You Have purchased this item";  
+    loselotPoints();
+     }
+     } else {
+      document.getElementById("haveoven").innerHTML = "You Do not Have enough purchased this item";
         }
+    }
  
    function loselotPoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 1000; 
