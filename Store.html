@@ -57,13 +57,8 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
       
     function buyfood() {
      if (localStorage.clickcountpoints > 15) {
-     if (localStorage.haveoven == true) {
-      document.getElementById("haveoven").innerHTML = "You Have already purchased this item";
-     } else {
-     localStorage.oven = true;
-       document.getElementById("haveoven").innerHTML = "You Have purchased this item";  
-    loselotPoints();
-     }
+       document.getElementById("food").innerHTML = "You Have purchased this item";  
+    losePoints();
      } else {
       document.getElementById("haveoven").innerHTML = "You Do not Have enough purchased this item";
         }
