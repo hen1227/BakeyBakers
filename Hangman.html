@@ -191,7 +191,9 @@ button{
   }
 
   </style>
+	
 <script>
+	
 window.onload = function () {
 
   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
@@ -266,11 +268,32 @@ window.onload = function () {
     }
   }
   
+   function clickcountpoints() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
+    document.getElementById("Points").innerHTML = localStorage.clickcountpoints; 
+        }  
+  
+     function loselowPoints() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 5; 
+        }
+	
+     function losesomePoints() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 15; 
+        }
+	
+   function getlotPoints() {
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 100; 
+        }
+      
+    
+   
+   
   // Show lives
    comments = function () {
     showLives.innerHTML = "You have " + lives + " lives";
     if (lives < 1) {
       showLives.innerHTML = "Game Over";
+	losesomePoints();
     }
     for (var i = 0; i < geusses.length; i++) {
       if (counter + space === geusses.length) {
@@ -425,6 +448,8 @@ window.onload = function () {
     play();
   }
 }
+
+
 </script>
 </head>
 <body>
