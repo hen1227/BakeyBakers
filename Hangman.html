@@ -428,7 +428,7 @@ window.onload = function () {
     hint.onclick = function() {
 
       hints = [
-        ["Kissing", "The holiday", "Cut it down put it up", "Hang them on your tree", "Website Name", "Mistletoe and _________", "Hint Not avalible"],
+        ["Kissing", "The holiday", "Cut it down put it up", "Hang them on your tree", "Put on the top of the tree", "Website Name", "Mistletoe and _________"],
         ["Hint Not avalible", "Hint Not avalible", "Hint Not avalible", "Hint Not avalible", "Hint Not avalible"],
         ["Hint Not avalible", "Hint Not avalible", "Hint Not avalible", "Hint Not avalible", "Hint Not avalible"]
     ];
@@ -436,6 +436,7 @@ window.onload = function () {
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
     showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+losesomePoints();
   };
 
    // Reset
