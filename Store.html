@@ -57,6 +57,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
       
     function buyfood() {
      if (localStorage.clickcountpoints > 15) {
+      localStorage.food = Number(localStorage.food) + 1000;
       document.getElementById("Food").innerHTML = localStorage.food;
     losePoints();
      } else {
