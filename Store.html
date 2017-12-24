@@ -83,6 +83,13 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
         }
     }
 
+function keyCode(event) {
+    var escpress = event.keyCode;
+    if (escpress == 27) {
+        alert ("You pressed the Escape key!");
+    }
+}
+
   </script>
 <head>
      </head>
@@ -107,6 +114,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
    <button class="BakeyBakersbutton" onclick="bakecookies()">Bake your cookies with a oven in 100 seconds</button>
  
     </center>
+    <input type="text" size="50" onkeydown="keyCode(event)"> 
    
    
 </body>
