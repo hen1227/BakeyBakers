@@ -93,7 +93,7 @@ function keyCode(event) {
   function lettertyped(event) {
     var x = event.keyCode;               // Get the Unicode value
     var y = String.fromCharCode(x);      // Convert the value into a character
-    document.getElementById("demo").innerHTML = "Number: " + x + " = Character: " + y;
+    document.getElementById("demo").innerHTML = "You typed " + y;
 }
 
   </script>
@@ -119,8 +119,6 @@ function keyCode(event) {
    
    <button class="BakeyBakersbutton" onclick="bakecookies()">Bake your cookies with a oven in 100 seconds</button>
    
- <input type="text" size="50" onkeydown="keyCode(event)"> 
-  
    <input type="text" size="40" onkeypress="lettertyped(event)">
 
 <p id="demo"></p>
