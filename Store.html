@@ -67,12 +67,13 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
         if (localStorage.food) {
             localStorage.food = Number(localStorage.food)+5;
          losePointes();
+         document.getElementById("Food").innerHTML = localStorage.food;
         }
         } else {
             localStorage.food = 0;
         }
      } else {
-      document.getElementById("haveoven").innerHTML = "You Do not Have enough purchased this item";
+      document.getElementById("Food").innerHTML = "You Do not Have enough purchased this item";
         }
     }
  
