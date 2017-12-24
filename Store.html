@@ -67,8 +67,10 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
         if (localStorage.clickcountfood) {
             localStorage.clickcountfood = Number(localStorage.clickcountfood)+1;
               losePoints();
+          document.getElementById("Food").innerHTML = localStorage.clickcountfood;  
         } else {
-            localStorage.clickcountfood = 0;
+            localStorage.clickcountfood = 1;
+         document.getElementById("Food").innerHTML = localStorage.clickcountfood; 
         } 
     }
      } else {
