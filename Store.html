@@ -33,9 +33,12 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
  </style>
  <script>
     function clickcountpoints() {
-   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) + 1;
-    document.getElementById("Points").innerHTML = localStorage.clickcountpoints; 
-        }  
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcountpoints) {
+            localStorage.clickcountpoints = Number(localStorage.clickcountpoints)+1;
+        } else {
+            localStorage.clickcountpoints = 1;
+        } 
   
      function losePoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10; 
@@ -57,9 +60,14 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
       
     function buyfood() {
      if (localStorage.clickcountpoints > 15) {
-      localStorage.food = Number(localStorage.food) + 1000;
-      document.getElementById("Food").innerHTML = localStorage.food;
-    losePoints();
+      if(typeof(Storage) !== "undefined") {
+        if (localStorage.food) {
+            localStorage.food = Number(localStorage.food)+5;
+         losePointes();
+        }
+        } else {
+            localStorage.food = 0;
+        }
      } else {
       document.getElementById("haveoven").innerHTML = "You Do not Have enough purchased this item";
         }
