@@ -89,6 +89,12 @@ function keyCode(event) {
         alert ("You pressed the Escape key!");
     }
 }
+  
+  function lettertyped(event) {
+    var x = event.keyCode;               // Get the Unicode value
+    var y = String.fromCharCode(x);      // Convert the value into a character
+    document.getElementById("demo").innerHTML = "Number: " + x + " = Character: " + y;
+}
 
   </script>
 <head>
@@ -112,9 +118,17 @@ function keyCode(event) {
      <h4 id="haveoven">You do not have this item yet</h4>
    
    <button class="BakeyBakersbutton" onclick="bakecookies()">Bake your cookies with a oven in 100 seconds</button>
- 
-    </center>
-    <input type="text" size="50" onkeydown="keyCode(event)"> 
+   
+ <input type="text" size="50" onkeydown="keyCode(event)"> 
+  
+   <input type="text" size="40" onkeypress="lettertyped(event)">
+
+<p id="demo"></p>
+
+
+
+   </center>
+    
    
    
 </body>
