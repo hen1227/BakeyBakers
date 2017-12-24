@@ -57,7 +57,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
       
     function buyfood() {
      if (localStorage.clickcountpoints > 15) {
-       document.getElementById("food").innerHTML = "You Have purchased this item";  
+      document.getElementById("Food").innerHTML = localStorage.food;
     losePoints();
      } else {
       document.getElementById("haveoven").innerHTML = "You Do not Have enough purchased this item";
@@ -97,7 +97,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
    
   <button class="BakeyBakersbutton" onclick="buyfood()">Buy pet Food</button>
    
- <h4 id="food">You have no bags of pet food</h4>
+ <h4 id="Food">You have no bags of pet food</h4>
    
     <button class="BakeyBakersbutton" onclick="buyoven()">Buy Oven</button>
    
