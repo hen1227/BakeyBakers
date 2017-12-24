@@ -44,7 +44,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
 }
   
      function losePoints() {
-   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 10; 
+   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 50; 
         }
    
   
@@ -62,7 +62,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
   
       
     function buyfood() {
-   if (localStorage.clickcountpoints > 1000) {
+   if (localStorage.clickcountpoints > 50) {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcountfood) {
             localStorage.clickcountfood = Number(localStorage.clickcountfood)+1;
@@ -70,10 +70,10 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
         } else {
             localStorage.clickcountfood = 0;
         } 
+    }
      } else {
       document.getElementById("Food").innerHTML = "You Do not Have enough purchased this item";
         }
-    }
     }
  
    function loselotPoints() {
