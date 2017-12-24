@@ -74,6 +74,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
       document.getElementById("Food").innerHTML = "You Do not Have enough purchased this item";
         }
     }
+    }
  
    function loselotPoints() {
    localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 1000; 
@@ -103,7 +104,7 @@ function keyCode(event) {
   function lettertyped(event) {
     var x = event.keyCode;               // Get the Unicode value
     var y = String.fromCharCode(x);      // Convert the value into a character
-    document.getElementById("demo").innerHTML = "You typed " + y;
+    document.getElementById("whattyped").innerHTML = "You typed " + y;
 }
 
   </script>
@@ -131,7 +132,7 @@ function keyCode(event) {
    <BR>
    <input type="text" size="40" onkeypress="lettertyped(event)">
 
-<p id="demo">Try Typing</p>
+<p id="whattypeds">Try Typing</p>
 
 
 
