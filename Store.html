@@ -95,19 +95,19 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
         }
     }
 
-function keyCode(event) {
-    var escpress = event.keyCode;
-    if (escpress == 27) {
-        alert ("You pressed the Escape key!");
-    }
-}
+
   
   function lettertyped(event) {
-    var x = event.keyCode;               // Get the Unicode value
-    var y = String.fromCharCode(x);      // Convert the value into a character
-    document.getElementById("whattyped").innerHTML = "You typed " + y;
+    var keycode = event.keyCode;               // Get the Unicode value
+    var keycodefind = String.fromCharCode(keycode);      // Convert the value into a character
+    document.getElementById("whattyped").innerHTML = "You typed " + keycodefind;
+   checkletter();
 }
 
+  function checkletter() {
+   
+  
+  
   </script>
 <head>
      </head>
@@ -133,7 +133,7 @@ function keyCode(event) {
    <BR>
    <input type="text" size="40" onkeypress="lettertyped(event)">
 
-<p id="whattypeds">Try Typing</p>
+<p id="whattyped">Try Typing</p>
 
 
 
