@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
  <style>
+  canvas { background: #eee; }
   .cookiebutton {
 background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-2093CBEF3A20.png);
     border: black;
@@ -102,8 +103,17 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
     var y = String.fromCharCode(x);      // Convert the value into a character
     document.getElementById("whattyped").innerHTML = "You typed " + y;
 }
+  
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
 
-  </script>
+
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+
 <head>
      </head>
 <body>
@@ -130,6 +140,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
 
 <p id="whattyped">Try Typing</p>
 
+  <canvas id="myCanvas" width="480" height="320"></canvas>
 
 
    </center>
