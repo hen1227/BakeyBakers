@@ -100,14 +100,14 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
   
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var x = canvas.width/2;
-var y = canvas.height-30;
+var xt = canvas.width/2;
+var yt = canvas.height-30;
 var dx = 2;
 var dy = -2;
 
 function drawBall() {
     ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
+    ctx.arc(xt, yt, 10, 0, Math.PI*2);
     ctx.fillStyle = "#red";
     ctx.fill();
     ctx.closePath();
@@ -116,8 +116,8 @@ function drawBall() {
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
-    x += dx;
-    y += dy;
+    xt += dx;
+    yt += dy;
 }
 
 setInterval(draw, 10);
