@@ -64,18 +64,17 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
   
       
     function buyfood() {
-   if (localStorage.clickcountpoints > 50) {
-    if(typeof(Storage) !== "undefined") {
+   if (clickcountpoints > 50) {
+  if(typeof(Storage) !== "undefined") {
         if (localStorage.food) {
             localStorage.food = Number(localStorage.food)+1;
-              losePoints();
-          document.getElementById("Food").innerHTML = localStorage.food;  
         } else {
             localStorage.food = 1;
-        } 
-    }
-     } else {
-      document.getElementById("Food").innerHTML = "You Do not Have enough purchased this item";
+        }
+        document.getElementById("food").innerHTML = "You have " + localStorage.food + " food.";
+        }
+    } else {
+      document.getElementById("food").innerHTML = "You Do not Have enough purchased this item";
         }
     }
  
@@ -144,7 +143,7 @@ setInterval(draw, 10);
    
   <button class="BakeyBakersbutton" onclick="buyfood()">Buy pet Food</button>
    
- <h4 id="Food">You have no bags of pet food</h4>
+ <h4 id="food">You have no bags of pet food</h4>
    
     <button class="BakeyBakersbutton" onclick="buyoven()">Buy Oven</button>
    
