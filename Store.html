@@ -63,15 +63,17 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
      
   
       
-    function buyfood() {
+   function food() {
    if (clickcountpoints > 50) {
   if(typeof(Storage) !== "undefined") {
         if (localStorage.food) {
             localStorage.food = Number(localStorage.food)+1;
+
         } else {
             localStorage.food = 1;
         }
-        document.getElementById("food").innerHTML = "You have " + localStorage.food + " food.";
+        document.getElementById("food").innerHTML = "You have clicked the button " + localStorage.food + " time(s).";
+        losePoints();
         }
     } else {
       document.getElementById("food").innerHTML = "You Do not Have enough purchased this item";
