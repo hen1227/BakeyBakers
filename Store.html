@@ -98,12 +98,6 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
 
 
   
-  function lettertyped(event) {
-    var x = event.keyCode;               // Get the Unicode value
-    var y = String.fromCharCode(x);      // Convert the value into a character
-    document.getElementById("whattyped").innerHTML = "You typed " + y;
-}
-  
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
@@ -134,11 +128,17 @@ setInterval(draw, 10);
 <body>
   <center>
   <h2 id="Points">You have no cookies</h2>
+   
    <button class="cookiebutton" onclick="points()">Cookie</button>
+ 
    <BR>
+    
    <button class="BakeyBakersbutton"><a href="https://hen1227.github.io/BakeyBakers/">Go Home</a></button>
+    
    <button class="BakeyBakersbutton"><a href="https://hen1227.github.io/BakeyBakers/pet.html">Go see my pet</a></button>
-  <BR>
+ 
+    <BR>
+     
    <button class="BakeyBakersbutton"><a href="https://hen1227.github.io/BakeyBakers/Hangman.html">Play Hang man for Cookies</a></button>
    
   <button class="BakeyBakersbutton" onclick="buyfood()">Buy pet Food</button>
@@ -150,10 +150,8 @@ setInterval(draw, 10);
      <h4 id="haveoven">You do not have this item yet</h4>
    
    <button class="BakeyBakersbutton" onclick="bakecookies()">Bake your cookies with a oven in 100 seconds</button>
+   
    <BR>
-   <input type="text" size="40" onkeypress="lettertyped(event)">
-
-<p id="whattyped">Try Typing</p>
     
     <p1>TestGame Ball bounce beta</p1>
     
