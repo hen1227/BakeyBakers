@@ -4,7 +4,8 @@
 
 var placex = 0;
 var placey = 0;
-
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
   
    document.onkeydown = keycode(e);
     document.onkeypress = keycode(e);
@@ -29,6 +30,11 @@ upPressed = true;
 }
 }
   
+ ctx.beginPath();
+ctx.rect(0, 0, 25, 25);
+ctx.strokeStyle = "rgba(2055, 0, 10, 30)";
+ctx.stroke();
+ctx.closePath(); 
  
 </script>
  <body>
