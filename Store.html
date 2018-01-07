@@ -105,8 +105,11 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
   var upPressed = false;
   var downPressed = false;
   
+   document.onkeydown = keycode;
+    document.onkeypress = keycode;
+    document.onkeyup = keycode;
   
-function keyDownHandler(e) {
+function keycode(e) {
     if(e.keyCode == 39) {
         rightPressed = true;
     }
@@ -172,7 +175,7 @@ upPressed = true;
 
      <BR>
       
-      <button class="BakeyBakersbutton" onclick="draw()">Start</button>
+      <button class="BakeyBakersbutton" onclick="Start()">Start</button>
      
 </center>
     
