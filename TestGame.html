@@ -3,11 +3,8 @@
 <script>
 
 var placex = 0;
-  var placey = 0;
-  var leftPressed = false;
-  var rightPressed = false; 
-  var upPressed = false;
-  var downPressed = false;
+var placey = 0;
+
   
    document.onkeydown = keycode(e);
     document.onkeypress = keycode(e);
@@ -21,30 +18,23 @@ function keycode(e) {
     if(e.keyCode == 39) {
         rightPressed = true;
     }
-    else if(e.keyCode == 37) {
+    if(e.keyCode == 37) {
         leftPressed = true;
     }
- else if (e.keyCode == 38) {
+   if (e.keyCode == 38) {
 upPressed = true;
 }
-  else if (e.keyCode == 38) {
-upPressed = true;
+   if (e.keyCode == 38) {
+
 }
 }
   
-  if (leftpressed === true) {
-   leftpressed = false;
-   placex - 25;
-   if (shiftPressed === true) {
-    placex - 100;
-    shiftPressed =  false;
-   }
-  }
+ 
 </script>
  <body>
 <div onmousedown="PlaceBlock(event)">
 
-  <canvas id="myCanvas" width="480" height="320"></canvas>
+  <canvas id="myCanvas" width="4800" height="3200"></canvas>
 
  </div>
  </body>
