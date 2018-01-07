@@ -16,6 +16,7 @@ alert("Placed");
  }
   
 function keycode(e) {
+   if(e.keyCode == 16) {
     if(e.keyCode == 39) {
        placex + 25:
     }
@@ -28,7 +29,21 @@ placey + 25;
    if (e.keyCode == 40) {
 placey - 25;
 }
+   } else {
+     
+         if(e.keyCode == 39) {
+       placex + 100:
+    }
+    if(e.keyCode == 37) {
+      placex - 100;
+    }
+   if (e.keyCode == 38) {
+placey + 100;
 }
+   if (e.keyCode == 40) {
+placey - 100;
+}
+   }
   
  ctx.beginPath();
 ctx.rect(0, 0, 25, 25);
