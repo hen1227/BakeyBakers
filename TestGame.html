@@ -27,31 +27,32 @@ alert("Placed");
  }
   
 function keycode(e) {
-   if(e.keyCode == 16) {
-    if(e.keyCode == 39) {
+var find = e.keyCode;
+   if(find == 16) {
+    if(find == 39) {
        placex + 25;
     }
-    if(e.keyCode == 37) {
+    if(find == 37) {
       placex - 25;
     }
-   if (e.keyCode == 38) {
+   if (find == 38) {
 placey + 25;
 }
-   if (e.keyCode == 40) {
+   if (find == 40) {
 placey - 25;
 }
    } else {
      
-         if(e.keyCode == 39) {
+   if(find == 39) {
        placex + 100;
     }
-    if(e.keyCode == 37) {
+    if(find == 37) {
       placex - 100;
     }
-   if (e.keyCode == 38) {
+   if (find == 38) {
 placey + 100;
 }
-   if (e.keyCode == 40) {
+   if (find == 40) {
 placey - 100;
 }
    }
