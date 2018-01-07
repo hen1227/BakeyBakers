@@ -34,7 +34,7 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
    
  </style>
  <script>
- function PlaceBlock() {
+ function PlaceBlock(event) {
 alert("Placed")
  }
     function points() {
@@ -174,7 +174,7 @@ upPressed = true;
     
     <BR>
 
-<div onmousedown="WhichButton(event)">
+<div onmousedown="PlaceBlock(event)">
 
   <canvas id="myCanvas" width="480" height="320"></canvas>
 
