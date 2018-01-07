@@ -34,8 +34,8 @@ background: url(https://hen1227.github.io/BakeyBakers/6AB2C80D-BFCD-418D-9349-20
    
  </style>
  <script>
- function PlaceBlock(event) {
-alert("Placed")
+function PlaceBlock(event) {
+alert("Placed");
  }
     function points() {
     if(typeof(Storage) !== "undefined") {
@@ -56,9 +56,8 @@ alert("Placed")
   function cookiesbaked() {
   localStorage.food = Number(localStorage.food) + 1000;
  }
-
   function bakecookies() {  
-  if (localStorage.haveoven == true) {
+  if (localStorage.haveoven === true) {
     setTimeout(function() {alert("Your oven has just produced 1000 cookies")}, 100);
      }
  cookiesbaked();  
@@ -71,7 +70,6 @@ alert("Placed")
   if(typeof(Storage) !== "undefined") {
         if (localStorage.food) {
             localStorage.food = Number(localStorage.food)+1;
-
         } else {
             localStorage.food = 1;
         }
@@ -89,7 +87,7 @@ alert("Placed")
       
     function buyoven() {
      if (localStorage.clickcountpoints > 1000) {
-     if (localStorage.haveoven == true) {
+     if (localStorage.haveoven === true) {
       document.getElementById("haveoven").innerHTML = "You Have already purchased this item";
      } else {
      localStorage.oven = true;
@@ -100,7 +98,6 @@ alert("Placed")
       document.getElementById("haveoven").innerHTML = "You Do not Have enough purchased this item";
         }
     }
-
   var placex = 0;
   var placey = 0;
   var leftPressed = false;
@@ -126,18 +123,15 @@ upPressed = true;
 upPressed = true;
 }
 }
-
   
-  if leftpressed = true {
+  if (leftpressed === true) {
    leftpressed = false;
    placex - 25;
-   if shiftPressed = true {
-    placex - 100
+   if (shiftPressed === true) {
+    placex - 100;
     shiftPressed =  false;
    }
   }
-    
- 
   }
 </script>
 <head>
