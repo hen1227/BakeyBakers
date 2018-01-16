@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500"
+style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var placey = 100;
+var placex = 25;
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "red";
+ctx.fillRect(placex,placey,25,25);
+
+function left() {
+placex + 25;
+}
+
+
+</script>
+<button onclick="left()">left</button>
+
+</body>
+</html>
