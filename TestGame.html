@@ -27,12 +27,8 @@ var placey = 0;
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
   
-ctx.beginPath();
-ctx.rect(placex, placey, 25, 25);
-ctx.strokeStyle("red");
-ctx.stroke();
-ctx.closePath();
-  
+ctx.fillStyle = "#red";
+ctx.fillRect(placex,placey,25,25);
   
   function PlaceBlock(event) {
 alert("Placed");
@@ -51,8 +47,10 @@ fuction right() {
  <body>
 <div onmousedown="PlaceBlock(event)">
 
-  <canvas id="myCanvas" width="1000" height="640"></canvas>
-
+  <canvas id="myCanvas" width="2000" height="1500"
+style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
  </div>
      <button class="BakeyBakersbutton" onclick="left()"><--</button>
    <button class="BakeyBakersbutton" onclick="right()">--></button>
