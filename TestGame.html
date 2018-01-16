@@ -25,7 +25,6 @@
 var placex = 0;
 var placey = 0;
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
   
 ctx.fillStyle = "#red";
 ctx.fillRect(placex, placey, 25, 25);
@@ -47,7 +46,7 @@ function right() {
  <body>
 <div onmousedown="PlaceBlock(event)">
 
-  <canvas id="myCanvas" context="2d" width="1000" height="1000"
+  <canvas id="myCanvas" width="1000" height="1000"
 style="border:1px solid #c3c3c3;">
 Your browser does not support the canvas element.
 </canvas>
