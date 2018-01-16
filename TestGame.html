@@ -18,47 +18,17 @@ ctx.stroke();
 ctx.closePath();
   
   
-   document.onkeydown = keycode(e);
-    document.onkeypress = keycode(e);
-    document.onkeyup = keycode(e);
-  
   function PlaceBlock(event) {
 alert("Placed");
  }
   
-function keycode(e) {
-var find = e.keyCode;
-   if(find == 16) {
-    if(find == 39) {
-       placex + 25;
-    }
-    if(find == 37) {
-      placex - 25;
-    }
-   if (find == 38) {
-placey + 25;
+fuction right() {
+  placex + 25;
 }
-   if (find == 40) {
-placey - 25;
-}
-   } else {
-     
-   if(find == 39) {
-       placex + 100;
-    }
-    if(find == 37) {
-      placex - 100;
-    }
-   if (find == 38) {
-placey + 100;
-}
-   if (find == 40) {
-placey - 100;
-}
-   }
+  fuction left() {
+  placex - 25;
 }
   
- 
  
 </script>
   </head>
@@ -68,7 +38,11 @@ placey - 100;
   <canvas id="myCanvas" width="1000" height="640"></canvas>
 
  </div>
- </body>
+   <button onclick="right()">--></button>
+   <button onclick="left()"><--</button>
+   
+  </body>
+  
 </html>
      
   
