@@ -23,44 +23,58 @@ ctx.fillRect(object1x, 500, 25, 25);
   function PlaceBlock(event) {
 alert("Placed");
  }
-  
+  function findspot(){
   if (turn0 == true) {
-     object1x = 0
+     object1x = 500;
     }
-  
+   if (turn45 == true) {
+     object1x = 1000;
+    }
+  if (turn315 == true) {
+     object1x = 0;
+    }
+  }
   
   function turn() {
     if (turn0 == true) {
      turn0 = false;
       turn45 = true;
+      findspot();
     }
       if (turn45 == true) {
      turn45 = false;
       turn90 = true;
+         findspot();
     }
       if (turn90 == true) {
      turn90 = false;
       turn135 = true;
+         findspot();
     }
       if (turn135 == true) {
      turn135 = false;
       turn180 = true;
+         findspot();
     }
       if (turn180 == true) {
      turn180 = false;
       turn225 = true;
+         findspot();
     }
       if (turn225 == true) {
      turn225 = false;
       turn270 = true;
+         findspot();
     }
       if (turn270 == true) {
      turn270 = false;
       turn315 = true;
+         findspot();
     }
       if (turn315 == true) {
      turn315= false;
       turn0 = true;
+         findspot();
     }
   }
     
