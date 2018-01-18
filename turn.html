@@ -14,11 +14,12 @@ var turn225 = false;
 var turn270 = false;
 var turn315 = false;
 var object1x = 0;
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+var can = document.getElementById('canvas');
+        can.height = 1000; can.width = 1300;
+        var ctx = can.getContext('2d');
+        ctx.fillStyle = "black";
+        ctx.fillRect(object1x, 500, 100, 100);
   
-  ctx.fillStyle = "#red";
-ctx.fillRect(object1x, 500, 100, 100);
   
   function PlaceBlock(event) {
 alert("Placed");
