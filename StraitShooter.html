@@ -20,12 +20,35 @@
    
  </style>
  <script>
-var Player =
+ window.onload = function () {
+
+        // GET THE IMAGE.
+        var Player = new Image();
+        player.src = 'TAJMAHAL.jpg';
+
+        // WAIT TILL IMAGE IS LOADED.
+        player.onload = function () {
+            fill_canvas(player);       // FILL THE CANVAS WITH THE IMAGE.
+        }
+
+        function fill_canvas(player) {
+            // CREATE CANVAS CONTEXT.
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+
+            canvas.width = player.width;
+            canvas.height = player.height;
+
+            ctx.drawImage(player, 0, 0);       // DRAW THE IMAGE TO THE CANVAS.
+        }
+    }
   
 </script>
 <head>
      </head>
 <body>
-
+<canvas id="canvas">
+        Sorry. Your browser does not support HTML5 canvas element.
+    </canvas>
 </body>
 </html>
