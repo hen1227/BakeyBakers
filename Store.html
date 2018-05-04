@@ -33,78 +33,14 @@ background: url(https://hen1227.github.io/BakeyBakers/IMG_0098.PNG);
    
  </style>
  <script>
-    function points() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcountpoints) {
-            localStorage.clickcountpoints = Number(localStorage.clickcountpoints)+1;
-        } else {
-            localStorage.clickcountpoints = 1;
-        } 
-        document.getElementById("Points").innerHTML = localStorage.clickcountpoints;
-    }
-}
-  
-   function fastcookies() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcountpoints) {
-            localStorage.clickcountpoints = Number(localStorage.clickcountpoints)+1000;
-        } else {
-            localStorage.clickcountpoints = 1;
-        } 
-        document.getElementById("Points").innerHTML = localStorage.clickcountpoints;
-    }
-}
-  
-     function losePoints() {
-   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 50; 
-        }
-   
-  
-  function cookiesbaked() {
-  localStorage.food = Number(localStorage.food) + 1000;
- }
-  function bakecookies() {  
-  if (localStorage.haveoven === true) {
-    setTimeout(function() {alert("Your oven has just produced 1000 cookies")}, 100);
-     }
- cookiesbaked();  
-    }
-     
-  
-      
-   function buyfood() {
-   if (clickcountpoints > 50) {
-  if(typeof(Storage) !== "undefined") {
-        if (localStorage.food) {
-            localStorage.food = Number(localStorage.food)+1;
-        } else {
-            localStorage.food = 1;
-        }
-        document.getElementById("food").innerHTML = "You have clicked the button " + localStorage.food + " time(s).";
-        losePoints();
-        }
-    } else {
-      document.getElementById("food").innerHTML = "You Do not Have enough purchased this item";
-        }
-    }
- 
-   function loselotPoints() {
-   localStorage.clickcountpoints = Number(localStorage.clickcountpoints) - 1000; 
-        }
-      
-    function buyoven() {
-     if (localStorage.clickcountpoints > 1000) {
-     if (localStorage.haveoven === true) {
-      document.getElementById("haveoven").innerHTML = "You Have already purchased this item";
-     } else {
-     localStorage.oven = true;
-       document.getElementById("haveoven").innerHTML = "You Have purchased this item";  
-    loselotPoints();
-     }
-     } else {
-      document.getElementById("haveoven").innerHTML = "You Do not Have enough purchased this item";
-        }
-    }
+	 function gainpoint(){
+   	
+   	
+   }	
+	function Fast (){
+   	
+   	
+   }
 
 </script>
 <head>
@@ -126,15 +62,13 @@ background: url(https://hen1227.github.io/BakeyBakers/IMG_0098.PNG);
 
     </R>
     
-  <button class="BakeyBakersbutton" onclick="buyfood()">Buy pet Food</button>
+<!--   <button class="BakeyBakersbutton" onclick="buyfood()">Buy pet Food</button> -->
    
  <h4 id="food">You have no bags of pet food</h4>
    
-    <button class="BakeyBakersbutton" onclick="buyoven()">Buy Oven</button>
+<!--     <button class="BakeyBakersbutton" onclick="buyoven()">Buy Oven</button> -->
    
      <h4 id="haveoven">You do not have this item yet</h4>
-   
-   <button class="BakeyBakersbutton" onclick="bakecookies()">Bake your cookies with a oven in 100 seconds</button>
    
    <BR>
     
