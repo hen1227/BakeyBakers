@@ -76,38 +76,7 @@ li.dropdown {
 		<BR>
 			
 <!-- customize labels of htmlcommentbox.com -->
-<script>
-	function setUname() {
-		if (document.getElementById("hcb_form_name").value == "") 
-		{
 
-		    }
-		    else {
-			
-		document.getElementById("Username").innerHTML = "<a ><b>" + document.getElementById("hcb_form_name").value + "</b></a>"
-		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat'> Logout</a>";
-			    var Username = document.getElementById("hcb_form_name").value; 
-			    document.getElementById('hcb_form_website').value = "http://coffeemedia.cf/profile?user=" + Username;
-	}
-	
-	}
-	setInterval(setUname, 500)
-	
-	
-	function hideItem() {
-			document.getElementById('hcb_form_name').hidden = true;
-		   document.getElementById('hcb_msg').hidden = true;	
-		var Username = document.getElementById("hcb_form_name").value;
-		document.getElementById('hcb_form_website').hidden = true;	
-		
-		if (Username == 'henrybookmail') {
-			document.getElementById("hcb_submit").hidden = true;
-			
-			
-		}
-		
-	}
-	setInterval(hideItem, 0)
 	
 /* This code goes ABOVE the main HTML Comment Box code!
  replace the text in the single quotes below to customize labels.*/
