@@ -192,6 +192,6 @@ function keyPressed(){
 }
 }
 
-// mousePressed(){
-//   mods[mods.length+1] = new Module(0,0,mods.length);
-// }
+function mousePressed(){
+  mods.push(new Module(-50,-50,mods.length));
+}
