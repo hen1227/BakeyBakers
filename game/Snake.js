@@ -74,6 +74,7 @@ function draw() {
     if(stopLoop){
       x = 330;
       y = 330;
+      stopLoop = false;
     }
   }
 
