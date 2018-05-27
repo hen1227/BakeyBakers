@@ -7,6 +7,7 @@ var count = 0;
 var pickupx = 300,pickupy = 300;
 var red = false;
 var pickupred = true;
+var stopLoop;
 
 function setup() {
   frameRate(8);
@@ -62,11 +63,17 @@ function draw() {
     }
   rect(pickupx,pickupy,15,15);
   for (var i = mods.length-1; i > -1; i--) {
-    mods[i].update();
-    mods[i].draw();
-    mods[i].check();
-    if(i > 1){
-      mods[i].hit();
+    if(!stopLoop){
+      mods[i].update();
+      mods[i].draw();
+      mods[i].check();
+      if(i > 1){
+        mods[i].hit();
+      }
+    }
+    if(stopLoop){
+      x = 330;
+      y = 330;
     }
   }
 
@@ -148,6 +155,7 @@ Module.prototype.hit = function() {
   if(dist(x, y, this.x, this.y) < 1){
     for(var i = mods.length-1; i > -1; i--){
       print("gameOver");
+      stopLoop = true;
       splice(mods,mods.length);
     }
   }
