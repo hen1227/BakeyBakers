@@ -9,6 +9,8 @@ var dropped = false;
 var vel = 0;
 var xvel;
 var acel = 0.4;
+var Score = 0;
+var amountdropped;
 
 function setup() {
   createCanvas(600,600)
@@ -61,7 +63,7 @@ function draw() {
     mods[i].draw();
     mods[i].hit();
   }
-  var lblScore = Document.getElementbyId('Score');
+  var lblScore = Document.getElementbyId('oScore');
 lblScore.innerHTML=Score;
   fill(0,255,0);
   ellipse(bx,by,bsize,bsize);
@@ -93,4 +95,5 @@ Module.prototype.hit = function() {
 
 function mousePressed(){
   dropped = true;
+  amountdropped++;
 }
