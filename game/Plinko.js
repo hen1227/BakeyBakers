@@ -61,6 +61,8 @@ function draw() {
     mods[i].draw();
     mods[i].hit();
   }
+  var lblScore = Document.getElementbyId('Score');
+lblScore.innerHTML=Score;
   fill(0,255,0);
   ellipse(bx,by,bsize,bsize);
 }
