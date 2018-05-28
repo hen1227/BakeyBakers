@@ -78,7 +78,6 @@ function draw() {
         mods.splice(i, 1);
       }
     }
-  }
 
   if(dir === "Up"){
     y -= 15;
@@ -192,6 +191,6 @@ function keyPressed(){
 }
 }
 
-function mousePressed(){
-  mods.push(new Module(-50,-50,mods.length));
-}
+// function mousePressed(){
+//   mods.push(new Module(-50,-50,mods.length));
+// }
