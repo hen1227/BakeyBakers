@@ -104,8 +104,8 @@ function draw() {
     x = 15;
   }
   fill(255,0,0);
-  textSize(30);
-  text("Score: " + mods.length, 510, 40);
+  textSize(25);
+  text("Score: " + mods.length, 460, 40);
   fill(0,0,255);
   if(red){
     fill(255,0,0)
