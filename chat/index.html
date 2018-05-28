@@ -1,77 +1,40 @@
 <!DOCTYPE html>
 <html>
-<style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-li {
-    float: left;
-}
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-li.dropdown {
-    display: inline-block;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-.dropdown-content a:hover {background-color: #f1f1f1}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
- .BakeyBakersbutton {
-    background-color: red;
-      button-align: center;
-    color: white;
-    border: black;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-   .BakeyBakersbutton:hover {
-    background-color: darkgray;
-    color: red;
-  }
-     </style>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "http://bakeybakers.com/index.css" />
 <head>
 </head>
 <body>
-	<ul>
-  <li><a href="http://bakeybakers.com/index.html">Home</a></li>
-<li><a href="https://www.youtube.com/channel/UCue90VnaIZzbN5FYsqMHsDA">My Youtube Channel</a></li>
-<li><a href="http://bakeybakers.com/recipes/index.html">Recipes</a></li>
-<li><a href="http://bakeybakers.com/chat/index.html">Chat</a></li>
-    </div>
-  </li>
-</ul>
+	<script>
+	function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      } 
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+	</script>
 	<BR>
 		<BR>
 			
@@ -140,5 +103,8 @@ hcb_user = {
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%247O4cRosrW09r4Pa.z%2FxSy1"+"&opts=16862&num=10&ts=1525726548106");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
 			</div>	
+			  <script>
+includeHTML();
+</script>
 </body>
 </html>
