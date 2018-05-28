@@ -63,7 +63,6 @@ function draw() {
     }
   rect(pickupx,pickupy,15,15);
   for (var i = mods.length-1; i > -1; i--) {
-    if(!stopLoop){
       mods[i].update();
       mods[i].draw();
       mods[i].check();
@@ -75,6 +74,9 @@ function draw() {
       x = 330;
       y = 330;
       stopLoop = false;
+      for (var i = mods.length-1; i > 0; i--) {
+        mods.splice(i, 1);
+      }
     }
   }
 
@@ -155,9 +157,7 @@ Module.prototype.check = function() {
 Module.prototype.hit = function() {
   if(dist(x, y, this.x, this.y) < 1){
     for(var i = mods.length-1; i > -1; i--){
-      print("gameOver");
       stopLoop = true;
-      splice(mods,mods.length);
     }
   }
 }
