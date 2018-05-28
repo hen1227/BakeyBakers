@@ -103,11 +103,13 @@ function draw() {
   if(x > width){
     x = 15;
   }
+  fill(255,0,0);
+  textSize(30);
+  text("Score: " + mods.length, 560, 10);
   fill(0,0,255);
   if(red){
     fill(255,0,0)
   }
-  text("Score: " + mods.length, 560, 10);
   ellipse(x, y, 10, 10);
 }
 
