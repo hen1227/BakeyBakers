@@ -107,6 +107,7 @@ function draw() {
   if(red){
     fill(255,0,0)
   }
+  text("Score: " + mods.length, 560, 10);
   ellipse(x, y, 10, 10);
 }
 
