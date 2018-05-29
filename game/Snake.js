@@ -193,6 +193,18 @@ function keyPressed(){
   }
 }
 }
+function left(){
+  dir = "Left";
+}
+function right(){
+  dir = "Right";
+}
+function up(){
+  dir = "Up";
+}
+function down(){
+  dir = "Down";
+}
 
 // function mousePressed(){
 //   mods.push(new Module(-50,-50,mods.length));
