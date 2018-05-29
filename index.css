@@ -54,7 +54,7 @@ li.dropdown {
 .snake {
     background-color: gray;
     color: white;
-    padding: 16px 32px;
+    font-size:36px;
     border: black;
     text-align: center;
 }
