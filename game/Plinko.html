@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <link rel = "stylesheet"
-   type = "text/css"
-   href = "http://bakeybakers.com/index.css" />
   <head>
     <script>
 	function includeHTML() {
@@ -33,12 +30,15 @@
   }
 }
 	</script>
-    
+ 	<div w3-include-html="http://bakeybakers.com/header.html"></div>   
     <meta charset="UTF-8">
     <title>Plinko</title>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
   <script src="Plinko.js" type="text/javascript"></script>
   </head>
   <body>
+	  <script>
+includeHTML();
+</script>
   </body>
 </html>
