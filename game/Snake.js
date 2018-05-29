@@ -194,16 +194,24 @@ function keyPressed(){
 }
 }
 function left(){
-  dir = "Left";
+   if(dir !== "Right"){
+    dir = "Left";
+   }
 }
 function right(){
-  dir = "Right";
+  if(dir !== "Left"){
+    dir = "Right";
+  }
 }
 function up(){
-  dir = "Up";
+  if(dir !== "Down"){
+    dir = "Up";
+  }
 }
 function down(){
-  dir = "Down";
+  if(dir !== "Up"){
+    dir = "Down";
+  }
 }
 
 // function mousePressed(){
