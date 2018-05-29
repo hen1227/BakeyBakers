@@ -41,8 +41,10 @@ li.dropdown {
     display: block;
 }
 
-a:link, a:visited {
+.game:link, .game:visited {
     background-color: #f44336;
+    border-color: black;
+    border: 3px;
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -51,7 +53,7 @@ a:link, a:visited {
 }
 
 
-a:hover, a:active {
+.game:hover, .game:active {
     background-color: red;
 }
 
