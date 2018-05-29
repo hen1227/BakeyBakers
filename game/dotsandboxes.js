@@ -130,7 +130,6 @@ Module.prototype.show = function() {
     rect(this.x-spacing/2, this.y-spacing/2, spacing,spacing);
   }else if (this.done == "2") {
     fill(0,0,255);
-    stroke(0,0,255);
     rect(this.x-spacing/2, this.y-spacing/2, spacing,spacing);
   }
   }
