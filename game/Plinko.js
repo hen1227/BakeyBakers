@@ -89,6 +89,6 @@ Module.prototype.hit = function() {
   }
 }
 
-function mousePressed(){
+function mouseReleased(){
   dropped = true;
 }
