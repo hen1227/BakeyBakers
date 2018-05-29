@@ -54,14 +54,14 @@ li.dropdown {
 .snake {
     background-color: gray;
     color: white;
-    font-size:36px;
+    padding: 16px 32px;
     border: black;
     text-align: center;
 }
 
 .snake:hover {
     background-color: red;
-    padding: 17px 33px;
+    padding: 19px 35px;
     color: white;
     border: blue;
     text-align: center;
