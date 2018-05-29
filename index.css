@@ -51,7 +51,19 @@ li.dropdown {
     text-decoration: none;
     display: inline-block;
 }
+.snake {
+    background-color: gray;
+    color: white;
+    border: black;
+    text-align: center;
+}
 
+.snake:hover {
+    background-color: red;
+    color: gray;
+    border: blue;
+    text-align: center;
+}
 
 .game:hover, .game:active {
     background-color: red;
