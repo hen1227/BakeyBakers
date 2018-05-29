@@ -23,6 +23,7 @@ function draw(){
     if(ready){
       change();
       ready = false;
+      changer = false;
     }
   }
   if(player1){
