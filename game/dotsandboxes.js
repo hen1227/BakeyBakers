@@ -81,7 +81,7 @@ Module.prototype.show = function() {
   //  ellipse(this.x, this.y, this.size, this.size);
     if(this.used1){
       strokeWeight(2);
-      stroke(255,0,255);
+      stroke(125,0,125);
       line(this.x,this.y,this.x-spacing,this.y);
     }else{
       strokeWeight(1);
@@ -90,7 +90,7 @@ Module.prototype.show = function() {
     }
     if(this.used2){
       strokeWeight(2);
-      stroke(255,0,255);
+      stroke(125,0,125);
       line(this.x,this.y,this.x,this.y-spacing);
     }else{
       strokeWeight(1);
@@ -99,7 +99,7 @@ Module.prototype.show = function() {
     }
     if(this.used3){
       strokeWeight(2);
-      stroke(255,0,255);
+      stroke(125,0,125);
       line(this.x,this.y-spacing,this.x-spacing,this.y-spacing);
     }else{
       strokeWeight(1);
@@ -108,7 +108,7 @@ Module.prototype.show = function() {
     }
   if(this.used4){
     strokeWeight(2);
-    stroke(255,0,255);
+    stroke(125,0,125);
     line(this.x-spacing,this.y,this.x-spacing,this.y-spacing);
   }else{
     strokeWeight(1);
