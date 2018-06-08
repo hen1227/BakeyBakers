@@ -8,7 +8,7 @@ var turn1 = true;
 var aselected = false;
 
 function setup() {
-  createCanvas(widowHeight, windowHeight);
+  createCanvas(600, 600);
   spacing = height/rows;
   for(var i = 0; i < rows; i++){
     for(var j = 0; j < cols; j++){
