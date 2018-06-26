@@ -27,7 +27,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(10);
   for (var i = 0; i < platforms.length; i++) {
     platforms[i].show();
   }
