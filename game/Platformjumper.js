@@ -47,7 +47,9 @@ function draw() {
     playery = height/2;
     jumpvel = 0;
   }
+	fill(255,0,0);
   text(score, 10, 10);
+	fill(0);
 }
 
 function jumped() {
