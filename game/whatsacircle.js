@@ -66,11 +66,12 @@ function draw() {
 }
 
 function mouseDragged(){
-	//if(dist(mouseX, mouseY, width/2, height/2) < width/2+10){
+	if(dist(mouseX, mouseY, width/2, height/2) < width/2+15){
   if(!drawn){
 		placed.push(new dot(mouseX, mouseY));
+  }
 	}else{
-  	
+  	drawn = true;
   }
 	}
 }
@@ -78,7 +79,7 @@ function mouseDragged(){
 function mouseReleased(){
   if(dist(mouseX, mouseY, width/2, height/2) < width/2+10){
 		drawn = true;
-	//}
+	}
 }
 function dot(mex, mey){
 	this.x = mex;
