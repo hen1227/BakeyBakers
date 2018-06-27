@@ -73,7 +73,6 @@ function mouseDragged(){
 	}else{
   	drawn = true;
   }
-	}
 }
 
 function mouseReleased(){
