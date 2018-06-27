@@ -35,11 +35,12 @@ function draw() {
     	noFill();
       strokeWeight(1);
     if(Visual){
+	    stroke(255,0,0);
   	  //ellipse(centerx, centery, averagedist-averagedist+placed.length/9, averagedist-averagedist+placed.length/9);
   	  ellipse(centerx, centery, averagedist+averagedist+placed.length/9, averagedist+averagedist+placed.length/9);
     }
     fill(255,0,0);
-      
+      stroke(0);
      iscircle = true;
     for(var l = 0; l < placed.length; l++){
       if(dist(placed[l].x, placed[l].y, centerx, centery) < averagedist+placed.length/9 && dist(placed[l].x, placed[l].y, centerx, centery) > averagedist-placed.length/9){}else{
