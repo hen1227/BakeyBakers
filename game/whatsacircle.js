@@ -76,7 +76,7 @@ function mouseDragged(){
 }
 
 function mouseReleased(){
-  if(dist(mouseX, mouseY, width/2, height/2) < width/2){
+  if(dist(mouseX, mouseY, width/2, height/2) < width/2+1){
 		drawn = true;
 	}
 }
