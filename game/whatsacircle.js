@@ -66,7 +66,7 @@ function draw() {
 }
 
 function mouseDragged(){
-	 if(dist(mouseX, mouseY, width/2, height/2) < width/2){
+	 if(dist(mouseX, mouseY, width/2, height/2) < width/2+1){
   if(!drawn){
 		placed.push(new dot(mouseX, mouseY));
 	}else{
