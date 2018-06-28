@@ -88,3 +88,10 @@ li.dropdown {
     background-color: darkgray;
     color: red;
   }
+
+.gamePic {
+    height: 50px;
+    width: 50px;
+}
+    
+}
