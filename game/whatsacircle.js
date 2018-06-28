@@ -66,17 +66,17 @@ function draw() {
 }
 
 function mouseDragged(){
-	if(dist(mouseX, mouseY, width/2, height/2) < width/2+15){
+	//if(dist(mouseX, mouseY, width/2, height/2) < width/2+15){
   if(!drawn){
 		placed.push(new dot(mouseX, mouseY));
   }
-	}else{
-  	drawn = true;
-  }
+	//}else{
+  	//drawn = true;
+  //}
 }
 
 function mouseReleased(){
-  if(dist(mouseX, mouseY, width/2, height/2) < width/2+10){
+  if(dist(mouseX, mouseY, width/2, height/2) < width/2){
 		drawn = true;
 	}
 }
