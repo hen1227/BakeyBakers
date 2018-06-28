@@ -41,7 +41,45 @@ li.dropdown {
     display: block;
 }
 
-.game:link, .game:visited {
+.gameLeft:link, .gameLeft:visited {
+    background-color: #f44336;
+    border-color: black;
+    border: 3px;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block
+    float: left;
+}
+
+
+
+.gameRight:hover, .gameRight:active {
+    background-color: red;
+}
+
+.gameLeft:link, .gameLeft:visited {
+    background-color: #f44336;
+    border-color: black;
+    border: 3px;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block
+    float: right;
+}
+
+.gameRight:hover, .gameRight:active {
+    background-color: red;
+}
+
+.gameRight:hover, .gameRight:active {
+    background-color: red;
+}
+
+.gameCenter:link, .gameCenter:visited {
     background-color: #f44336;
     border-color: black;
     border: 3px;
@@ -50,7 +88,15 @@ li.dropdown {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    float: center;
 }
+
+.gameCenter:hover, .gameCenter:active {
+    background-color: red;
+}
+
+
+
 .snake {
     background-color: gray;
     color: white;
@@ -65,10 +111,6 @@ li.dropdown {
     color: white;
     border: blue;
     text-align: center;
-}
-
-.game:hover, .game:active {
-    background-color: red;
 }
 
  .BakeyBakersbutton {
@@ -89,9 +131,23 @@ li.dropdown {
     color: red;
   }
 
-.gamePic {
+.gamePicRight {
     height: 150px;
     width: 150px;
+    float: right;
 }
-    
+ 
+
+.gamePicLeft {
+    height: 150px;
+    width: 150px;
+    float: left;
+}   
+
+
+.gamePicMiddle {
+    height: 150px;
+    width: 150px;
+    float: center;
+}
 }
