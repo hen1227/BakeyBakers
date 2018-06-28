@@ -55,11 +55,11 @@ li.dropdown {
 
 
 
-.gameRight:hover, .gameRight:active {
+.gameLeft:hover, .gameRight:active {
     background-color: red;
 }
 
-.gameLeft:link, .gameLeft:visited {
+.gameRight:link, .gameLeft:visited {
     background-color: #f44336;
     border-color: black;
     border: 3px;
@@ -69,10 +69,6 @@ li.dropdown {
     text-decoration: none;
     display: inline-block
     float: right;
-}
-
-.gameRight:hover, .gameRight:active {
-    background-color: red;
 }
 
 .gameRight:hover, .gameRight:active {
