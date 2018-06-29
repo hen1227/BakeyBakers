@@ -41,41 +41,7 @@ li.dropdown {
     display: block;
 }
 
-.gameLeft:link, .gameLeft:visited {
-    background-color: #f44336;
-    border-color: black;
-    border: 3px;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block
-    float: left;
-}
-
-
-
-.gameLeft:hover, .gameRight:active {
-    background-color: red;
-}
-
-.gameRight:link, .gameLeft:visited {
-    background-color: #f44336;
-    border-color: black;
-    border: 3px;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block
-    float: right;
-}
-
-.gameRight:hover, .gameRight:active {
-    background-color: red;
-}
-
-.gameCenter:link, .gameCenter:visited {
+.game:link, .game:visited {
     background-color: #f44336;
     border-color: black;
     border: 3px;
@@ -87,7 +53,7 @@ li.dropdown {
     float: center;
 }
 
-.gameCenter:hover, .gameCenter:active {
+.game:hover, .game:active {
     background-color: red;
 }
 
@@ -127,23 +93,9 @@ li.dropdown {
     color: red;
   }
 
-.gamePicRight {
+.gamePic {
     height: 150px;
     width: 150px;
     float: right;
-}
- 
-
-.gamePicLeft {
-    height: 150px;
-    width: 150px;
-    float: left;
-}   
-
-
-.gamePicCenter {
-    height: 150px;
-    width: 150px;
-    float: center;
-}
+    }
 }
