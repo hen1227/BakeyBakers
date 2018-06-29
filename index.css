@@ -96,6 +96,7 @@ li.dropdown {
 .gamePic {
     height: 150px;
     width: 150px;
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
     }
 }
