@@ -217,6 +217,7 @@ function powerup(_x, _y) {
 
   this.show = function() {
     rectMode(CENTER);
+	  fill(255);
     rect(this.x, this.y, 15, 15);
     if (this.type == 1) {
       ellipse(this.x, this.y, 13, 13);
