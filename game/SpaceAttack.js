@@ -25,7 +25,7 @@ var points = 0;
 function setup() {
   frameRate(30);
   rectMode(CENTER);
-  createCanvas(400, 400);
+  createCanvas(600, 500);
   shipx = width / 2;
   shipy = height - 40;
 	for(var i = 0; i < round(random(10, 25)); i++){
