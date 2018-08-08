@@ -371,6 +371,7 @@ function explode(_x, _y, _me, _G) {
   this.y = _y;
 
   this.move = function(_me) {
+		this.y += 3;
     if (this.size < this.duriation * 2) {
       this.size += 2;
     } else {
