@@ -1,10 +1,11 @@
 var pause = true;
 var stars  = [];
 var powerups = 0;
-var starmove=  true;
+var starmove =  false;
 //1 == sheild
 //2 == fastfiring
 //3 == spreadshot
+//4 == health
 var C = [];
 var AD = 0;
 var PU = [];
@@ -371,7 +372,9 @@ function explode(_x, _y, _me, _G) {
   this.y = _y;
 
   this.move = function(_me) {
-		this.y += 3;
+    if(starmove){
+    	this.y += 3;
+    }
     if (this.size < this.duriation * 2) {
       this.size += 2;
     } else {
@@ -401,12 +404,14 @@ function star(){
   this.size = random(4, 10);
   
   this.move = function(){
-  	this.y += 3;
-    if(this.y > height){
-    	this.x = random(width);
-  		this.y = 0;
-	  	this.size = random(4, 10);
-    }
+    if(starmove){
+  		this.y += 3;
+    	if(this.y > height){
+    		this.x = random(width);
+  			this.y = 0;
+	  		this.size = random(4, 10);
+    	}
+ 		}
   }
   
   this.show = function(){
@@ -428,7 +433,8 @@ function coin(_x, _y, _W){
   this.widthflux = 10;
   
   this.show = function(_me){
-    this.y += 2;
+    
+    this.y += 3.5;
 	  this.width = this.maxwidth * abs(sin(AD/this.widthflux));
     fill(255, 245, 0);
   	ellipse(this.x, this.y, this.width, this.height);
@@ -451,6 +457,7 @@ function reset() {
   score = 0;
   points = 0;
   A.splice(0);
+  C.splice(0);
   shots.splice(0);
   PU.splice(0);
   powerups = 0;
