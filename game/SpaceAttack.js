@@ -90,6 +90,9 @@ function draw() {
     rectMode(CENTER);
     fill(255);
     stroke(0);
+	 for (var a = 0; a < C.length; a++) {
+      C[a].show();
+    }
     for (var d = PU.length - 1; d > -1; d--) {
       PU[d].show();
       PU[d].move();
@@ -152,9 +155,6 @@ function draw() {
     for (var l = 0; l < shots.length; l++) {
       shots[l].show();
       shots[l].move();
-    }
-		for (var a = 0; a < C.length; a++) {
-      C[a].show();
     }
     for (var g = 0; g < F.length; g++) {
       A.splice(F[g], 1);
