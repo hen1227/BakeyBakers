@@ -49,7 +49,7 @@ function draw() {
     textSize(25);
     text("Down arrow to heal with heal points", 5, height / 2);
     textSize(30);
-    text("Up arrow or space to shot", 20, height / 2+25);
+    text("Up arrow or space to shoot", 20, height / 2+25);
     text("Paused", width / 2 - 60, height - height / 4);
     textSize(25);
     text("Press Esc to Pause or Unpause", 20, height - height / 3);
