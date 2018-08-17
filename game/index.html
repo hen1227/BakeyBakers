@@ -6,6 +6,23 @@
    type = "text/css"
    href = "https://bakeybakers.com/index.css" />
 <head>
+	
+	<script>
+		function getStarRatingString(rating) {
+  var toReturn = "";
+  for (var i = 0; i < 5; i++) {
+    if (i < rating) {
+      toReturn += "c";
+    } else {
+      toReturn += "☆";
+    }
+  }
+  return toReturn;
+}
+
+
+
+	</script>
 	<script>
 	function includeHTML() {
   var z, i, elmnt, file, xhttp;
@@ -61,6 +78,8 @@
 		<a href="https://bakeybakers.com/game/dotsandboxes.html" class="game">Dots and Boxes</a>
 	</div>
 	<br>
+		
+	<br>
 	<div>
 		
 <img align="middle" class="gamePic" src="https://bakeybakers.com/GamePictures/CheckersPicture.png"></img>
@@ -82,6 +101,9 @@
 <br>
 <div>
 	 	<a href="https://bakeybakers.com/game/whatsacircle.html" class="game">What is a Circle?</a>
+	<div onclick="this.innerHTML = getStarRatingString(4)">
+		Click to Find Rating
+	</div>
 </div>  
   </div>
 	 <script>
