@@ -6,10 +6,6 @@
    type = "text/css"
    href = "https://bakeybakers.com/index.css" />
 <head>
-	
-	
-<button onclick="GetToken()" type="button">Click me!</button>
-<div id="result"></div>
 <script>
 function GetToken() {
     if(typeof(Storage) !== "undefined") {
@@ -18,9 +14,9 @@ function GetToken() {
         } else {
             localStorage.token = 1;
         }
-        document.getElementById("result").innerHTML = "You have " + localStorage.token + " Tokens.";
+        document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
     } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById("tokenamount").innerHTML = "Sorry, your browser does not support web storage..., I will give you 100 a day, sorry for the inconvenece";
     }
 }
 </script>
@@ -74,7 +70,7 @@ function GetToken() {
 	<div w3-include-html="https://bakeybakers.com/header.html"></div>
   <div style="text-align: center;">
 	  <button onclick="GetToken()" type="button">Click me!</button>
-<div id="result"></div>
+<div id="tokenamount"></div>
 	  </div>
 		  <div style="text-align: center;">
   <h2>Bakey Bakers Games</h2>
