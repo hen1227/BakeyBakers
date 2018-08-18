@@ -8,8 +8,8 @@ ul {
 li {
     float: left;
 }
-tli {
-    float: left;
+.tli {
+    float: right;
     display: inline-block;
     color: white;
     text-align: center;
