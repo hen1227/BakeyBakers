@@ -1,4 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
 <title>Bakeybakers</title>
+
+<script>
+function startload(){
+	if(typeof(Storage) !== "undefined") {
+        if (localStorage.token) {
+        document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
+    } else {
+        document.getElementById("tokenamount").innerHTML = "Hello start geting tokens";
+    }
+}
+
+</script>
+</head>
+<body>
 	<ul>
 		<li><a href="https://zipansion.com/1pgvZ">Home</a></li>
   <li><a href="https://www.youtube.com/channel/UCue90VnaIZzbN5FYsqMHsDA">My Youtube Channel</a></li>
@@ -7,5 +24,6 @@
     </div>
   </li>
 </ul>
-
+</body>
+</html>
 
