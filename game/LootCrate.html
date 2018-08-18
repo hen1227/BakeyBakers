@@ -3,6 +3,13 @@
 <head>
 <script>
   function return(){
+     if(typeof(Storage) !== "undefined") {
+        if (localStorage.token) {
+            localStorage.token = Number(localStorage.token)+8;
+        } else {
+            localStorage.token = 8;
+        }
+     }
     location.replace("https://bakeybakers.com/game");
   }
 </script>
