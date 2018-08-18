@@ -107,6 +107,14 @@ li a:hover, .dropdown:hover .dropbtn {
     
 }
 
+#loot {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+ }
+
 .flashing:hover {
     background-color: darkgray;
     color: red;
