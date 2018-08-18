@@ -8,6 +8,14 @@ ul {
 li {
     float: left;
 }
+tli {
+    float: left;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 li a, .dropbtn {
     display: inline-block;
     color: white;
@@ -99,4 +107,8 @@ li.dropdown {
     margin-left: auto;
     margin-right: auto;
     }
+}
+
+.gameStarRate {
+    display: inline-block;
 }
