@@ -7,6 +7,11 @@
    href = "https://bakeybakers.com/index.css" />
 <head>
 <script>
+function OpenLootCrate() {
+	location.replace("https://bakeybakers.com/game/LootCrate");
+}
+	
+	
 function GetToken() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.token) {
@@ -76,7 +81,7 @@ function GetToken() {
 			  <button onclick="GetToken()" class="flashing">Watch Ad for Tokens</button>
 			  <br>
 			  <div>
-			  <button onclick="location.replace("https://bakeybakers.com/game/LootCrate")" class="flashing">Open Loot Crate</button>  
+			  <button onclick="OpenLootCrate" class="flashing">Open Loot Crate</button>  
 			  </div>
 			  <br>
 
