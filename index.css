@@ -5,8 +5,8 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
-li {
-    float: left;
+.tli {
+    float: right;
 }
 li a, .dropbtn {
     display: inline-block;
@@ -14,6 +14,7 @@ li a, .dropbtn {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    float: left;
 }
 li a:hover, .dropdown:hover .dropbtn {
     background-color: red;
