@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>BakeyBakers</title>
 
 <script>
 function startload(){
-	 if(typeof(Storage) !== "undefined") {
         if (!localStorage.token) {
-            localStorage.token = 0;
+        	localStorage.token = 0;
         }
-	 }
 	document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
 }
 
