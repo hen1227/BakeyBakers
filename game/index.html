@@ -7,6 +7,12 @@
    href = "https://bakeybakers.com/index.css" />
 <head>
 <script>
+	function startload(){
+        if (!localStorage.token) {
+        	localStorage.token = 0;
+        }
+	document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
+}
 function OpenLootCrate() {
 	location.replace("https://bakeybakers.com/game/LootCrate");
 }
@@ -89,7 +95,7 @@ function GetToken() {
  as I could in to a GitHub supported type, P5JS.</p1>
     </div>
 </head>
-<body>
+<body onload="startload()">
   <div style="text-align: center;">
   <h3>Here are some of the Games I've made</h3>
 	  <br>
