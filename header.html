@@ -5,11 +5,11 @@
 
 <script>
 function startload(){
-	if(typeof(Storage) !== "undefined") {
-        if (localStorage.token) {
+	 if(typeof(Storage) !== "undefined") {
+        if (!localStorage.token) {
+            localStorage.token = 0;
+        }
         document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
-    } else {
-        document.getElementById("tokenamount").innerHTML = "Hello start geting tokens";
     }
 }
 
