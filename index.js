@@ -5,11 +5,11 @@ function startload() {
   }
   document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
   if (localStorage.canopenLS) {
-    localStorage.canopenLS = false;
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
   } else {
     setTimeout(function() {
-      localStorage.canopenLS;
+      localStorage.canopenLS = true;
+      document.getElementById("canopen").innerHTML = "You can open a loot Crate";
     }, 3000);
     document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
   }
