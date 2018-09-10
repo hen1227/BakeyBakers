@@ -4,14 +4,15 @@ function startload() {
     localStorage.token = 0;
   }
   document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
-  if (localStorage.canopenLS) {
+  if (localStorage.canopenLS && localStorage.canopenLS == true) {
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
   } else {
+      localStorage.canopenLS = false;
     setTimeout(function() {
       localStorage.canopenLS = true;
       document.getElementById("canopen").innerHTML = "You can open a loot Crate";
       alert('You can now open a Loot crate');
-    }, 15000);
+    }, 30000);
   }
 }
 
