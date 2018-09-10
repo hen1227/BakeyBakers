@@ -36,11 +36,12 @@ function OpenLootCrate() {
       location.replace("https://bakeybakers.com/game/LootCrate");
     } else {
       setTimeout(function() {
-          localStorage.canopenLS = true}, 15000);
+        localStorage.canopenLS = true;
+        document.getElementById("canopen").innerHTML = "You can open a loot Crate";
+  }, 30000);
       }
     
-    document.getElementById("canopen").innerHTML = "You can open a loot Crate";
-    }
+        }
 }
 
 function getStarRatingString(rating) {
