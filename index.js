@@ -38,6 +38,8 @@ function OpenLootCrate() {
       setTimeout(function() {
           localStorage.canopenLS = true}, 15000);
       }
+    
+    document.getElementById("canopen").innerHTML = "You can open a loot Crate";
     }
 }
 
