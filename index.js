@@ -9,7 +9,6 @@ function startload() {
 			document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
 		}
 	}
-}
 
 function GetToken() {
 	if (typeof(Storage) !== "undefined") {
@@ -35,8 +34,7 @@ function OpenLootCrate() {
 			
 		}
 	}
-	
-}
+				   }
 
 function getStarRatingString(rating) {
 	var toReturn = "";
