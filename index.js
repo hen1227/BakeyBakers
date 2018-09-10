@@ -7,7 +7,7 @@ function startload() {
   if (localStorage.canopenLS && localStorage.canopenLS == true) {
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
   } else {
-    document.getElementById("canopen").innerHTML = "You can open a loot Crate";
+    document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
       localStorage.canopenLS = false;
     setTimeout(function() {
       localStorage.canopenLS = true;
@@ -33,17 +33,18 @@ function GetToken() {
 
 function OpenLootCrate() {
   if (typeof(Storage) !== "undefined") {
-    if (localStorage.canopenLS) {
-      localStorage.canopenLS = false;
+    if (localStorage.canopenLS && localStorage.canopenLS == true) {
+    document.getElementById("canopen").innerHTML = "You can open a loot Crate";
       location.replace("https://bakeybakers.com/game/LootCrate");
-    } else {
-      setTimeout(function() {
-        localStorage.canopenLS = true;
-        document.getElementById("canopen").innerHTML = "You can open a loot Crate";
-  }, 30000);
-      }
-    
-        }
+  } else {
+    document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
+      localStorage.canopenLS = false;
+    setTimeout(function() {
+      localStorage.canopenLS = true;
+      document.getElementById("canopen").innerHTML = "You can open a loot Crate";
+      alert('You can now open a Loot crate');
+    }, 30000);
+  }
 }
 
 function getStarRatingString(rating) {
