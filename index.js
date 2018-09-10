@@ -17,10 +17,27 @@ function GetToken() {
 	} else {
 		document.getElementById("tokenamount").innerHTML = "Sorry, your browser does not support web storage..., I will give you 100 a day, sorry for the inconvenece";
 	}
+	
+	if (typeof(Storage) !== "undefined") {
+		if (localStorage.canopen) {
+			document.getElementById("canopen").innerHTML = "You can open a loot Crate";
+		}else{
+			document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
+		}
+	}
 }
 
 function OpenLootCrate() {
-	location.replace("https://bakeybakers.com/game/LootCrate");
+	if (typeof(Storage) !== "undefined") {
+		if (localStorage.canopen) {
+			localStorage.canopen = false;
+			location.replace("https://bakeybakers.com/game/LootCrate");
+		} else {
+			setTimeout(function(){localStorage.token = true, 15000);
+			
+		}
+	}
+	
 }
 
 function getStarRatingString(rating) {
