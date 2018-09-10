@@ -10,8 +10,8 @@ function startload() {
     setTimeout(function() {
       localStorage.canopenLS = true;
       document.getElementById("canopen").innerHTML = "You can open a loot Crate";
-    }, 3000);
-    document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
+      alert('You can now open a Loot crate');
+    }, 15000);
   }
 }
 
