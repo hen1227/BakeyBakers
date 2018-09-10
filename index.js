@@ -3,9 +3,13 @@ function startload() {
     localStorage.token = 0;
   }
   document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
-  if (localStorage.canopen) {
+  if (localStorage.canopenLS) {
+    localStorage.canopenLS = false;
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
   } else {
+    setTimeout(function() {
+      localStorage.canopenLS;
+    }, 3000);
     document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
   }
 }
