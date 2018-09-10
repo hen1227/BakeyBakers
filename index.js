@@ -7,6 +7,7 @@ function startload() {
   if (localStorage.canopenLS && localStorage.canopenLS == true) {
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
   } else {
+    document.getElementById("canopen").innerHTML = "You can open a loot Crate";
       localStorage.canopenLS = false;
     setTimeout(function() {
       localStorage.canopenLS = true;
