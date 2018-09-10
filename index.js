@@ -1,3 +1,4 @@
+
 function startload() {
   if (!localStorage.token) {
     localStorage.token = 0;
@@ -35,11 +36,9 @@ function OpenLootCrate() {
       location.replace("https://bakeybakers.com/game/LootCrate");
     } else {
       setTimeout(function() {
-          localStorage.token = true, 15000);
-
+          localStorage.token = true}, 15000);
       }
     }
-  }
 }
 
 function getStarRatingString(rating) {
