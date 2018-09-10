@@ -31,12 +31,12 @@ function GetToken() {
 
 function OpenLootCrate() {
   if (typeof(Storage) !== "undefined") {
-    if (localStorage.canopen) {
-      localStorage.canopen = false;
+    if (localStorage.canopenLS) {
+      localStorage.canopenLS = false;
       location.replace("https://bakeybakers.com/game/LootCrate");
     } else {
       setTimeout(function() {
-          localStorage.token = true}, 15000);
+          localStorage.canopenLS = true}, 15000);
       }
     }
 }
