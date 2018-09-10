@@ -7,7 +7,7 @@ function startload() {
   if (localStorage.canopenLS && localStorage.canopenLS == true) {
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
   } else {
-    document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
+    document.getElementById("canopen").innerHTML = "You can not open a loot Crate";
       localStorage.canopenLS = false;
     setTimeout(function() {
       localStorage.canopenLS = true;
@@ -37,7 +37,7 @@ function OpenLootCrate() {
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
       location.replace("https://bakeybakers.com/game/LootCrate");
   } else {
-    document.getElementById("canopen").innerHTML = "You can't open a loot Crate";
+    document.getElementById("canopen").innerHTML = "You can not open a loot Crate";
       localStorage.canopenLS = false;
     setTimeout(function() {
       localStorage.canopenLS = true;
