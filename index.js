@@ -6,6 +6,7 @@ function startload() {
   document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
   if (localStorage.canopenLS && localStorage.canopenLS == true) {
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
+    localStorage.canopenLS = true;
   } else {
     document.getElementById("canopen").innerHTML = "You can not open a loot Crate";
       localStorage.canopenLS = false;
@@ -13,7 +14,7 @@ function startload() {
       localStorage.canopenLS = true;
       document.getElementById("canopen").innerHTML = "You can open a loot Crate";
       alert('You can now open a Loot crate');
-    }, 30000);
+    }, 50000);
   }
 }
 
@@ -32,10 +33,8 @@ function GetToken() {
 }
 
 function OpenLootCrate() {
-  if (typeof(Storage) !== "undefined") {
-    if (localStorage.canopenLS && localStorage.canopenLS == true) {
-    document.getElementById("canopen").innerHTML = "You can open a loot Crate";
-      location.replace("https://bakeybakers.com/game/LootCrate");
+  if (localStorage.canopenLS && localStorage.canopenLS == true) {
+    location.replace("https://bakeybakers.com/game/LootCrate");
   } else {
     document.getElementById("canopen").innerHTML = "You can not open a loot Crate";
       localStorage.canopenLS = false;
@@ -43,7 +42,8 @@ function OpenLootCrate() {
       localStorage.canopenLS = true;
       document.getElementById("canopen").innerHTML = "You can open a loot Crate";
       alert('You can now open a Loot crate');
-    }, 30000);
+    }, 50000);
+  }
   }
 }
 
