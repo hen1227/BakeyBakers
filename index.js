@@ -44,7 +44,6 @@ function OpenLootCrate() {
       alert('You can now open a Loot crate');
     }, 50000);
   }
-  }
 }
 
 function getStarRatingString(rating) {
