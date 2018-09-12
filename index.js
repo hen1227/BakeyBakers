@@ -4,7 +4,7 @@ function startload() {
     localStorage.token = 0;
   }
   document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
-  if (localStorage.canopenLS && localStorage.canopenLS == true) {
+  if (localStorage.canopenLS == true) {
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
     localStorage.canopenLS = true;
   } else {
