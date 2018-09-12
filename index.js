@@ -4,7 +4,7 @@ function startload() {
     localStorage.token = 0;
   }
   document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
-  if (localStorage.canopenLS == true) {
+  if (localStorage.canopenLS = true) {
     document.getElementById("canopen").innerHTML = "You can open a loot Crate";
     localStorage.canopenLS = true;
   } else {
@@ -33,8 +33,9 @@ function GetToken() {
 }
 
 function OpenLootCrate() {
-  if (localStorage.canopenLS == true) {
+  if (localStorage.canopenLS = true) {
     location.replace("https://bakeybakers.com/game/LootCrate");
+    localStorage.canopenLS
   } else {
     document.getElementById("canopen").innerHTML = "You can not open a loot Crate";
       localStorage.canopenLS = false;
