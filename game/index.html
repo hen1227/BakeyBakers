@@ -104,12 +104,37 @@
 	</div>
 </div>  
   </div>
-	<h3>Mini Gof DownLoad</h3>
+	<h3>Mini Gof Download</h3>
 		<p1>Sadly I am an unidentified developer so you have to trust it even though it says I'm unsafe. You might have to right click it and click open to get it to start. Enjoy!</p1>
 <BR>
 		<a href="https://bakeybakers.com/MiniGolf.zip">100% safe Download</a><!--<p1>hopefully</p1>-->
 <BR>
 		<p1>With any Ideas or concerns send me a message me at henhen1227@gmail.com</p1>
+	
+	<h3>Game Chat</h3>
+	<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+</script>
 	 <script>
 includeHTML();
 </script>
