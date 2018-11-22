@@ -115,13 +115,13 @@
 	<button class="open-button" onclick="TalkInChat()">Chat</button>
 	<script>
 		function TalkInChat(){
-			var msg = prompt("What would you like to say");
-// <?php
-// $myfile = fopen("GameChat.txt", "w") or die("Unable to open file!");
-// $txt = msg;
-// fwrite($myfile, $txt);
-// fclose($myfile);
-// ?>
+			<form name="form" action="" method="post">
+  <input type="text" name="GameChatInput" id="GameChatInput" value="Message">
+	  <?php $myfile = fopen("GameChat.txt", "w") or die("Unable to open file!");
+			fwrite($myfile, $_GET['subject']);
+			fclose($myfile);
+			?>
+</form>
 		}
 	</script>
 
