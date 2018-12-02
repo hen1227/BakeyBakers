@@ -53,8 +53,27 @@ function draw() {
     if(bx < spacing*1.5){
       xvel = abs(xvel);
     }
-    if(by > width - spacing/2){
+    if(by > height - spacing/2){
       dropped = false;
+      if(bx < width/5)
+         {
+         place = "One"
+         }else if(bx < width/5*2)
+         {
+         place = "Two"
+         }else if(bx < width/5*3)
+         {
+         place = "Three"
+         }else if(bx < width/5*4)
+         {
+         place = "Four"
+         }else if(bx < width)
+         {
+         place = "Five"
+         }
+      
+      
+      
     }
   }
   for(var i = 0; i < mods.length; i++){
