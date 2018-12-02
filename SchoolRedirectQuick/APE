@@ -1,0 +1,6 @@
+ <script>
+  window.open('https://powerschool.cape.k12.me.us/guardian/home.html', '_blank');
+  window.open('https://mail.google.com/mail/u/0/#inbox', '_blank');
+  </script>
+  
+  <h1>Check Agenda</h1>
