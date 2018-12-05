@@ -8,6 +8,7 @@
     <script>
     var wasChat = readTextFile("https://bakeybakers.com/game/ChatText.txt");
     var prevtext = new Blob([wasChat], {type: "text/plain;charset=utf-8"});
+        while(true){
     document.write(prevtext);  
 //         Type("Test ");
         
@@ -15,6 +16,8 @@
         {
             wasChat += whatSaid;
             saveAs(wasChat, "ChatText.txt");
+        }
+            Type();
         }
     </script>
 </body>
