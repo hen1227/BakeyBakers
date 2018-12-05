@@ -9,7 +9,7 @@
     var wasChat = readTextFile("https://bakeybakers.com/game/ChatText.txt");
     var prevtext = new Blob([wasChat], {type: "text/plain;charset=utf-8"});
         while(true){
-    document.write(prevtext);  
+    document.write(readFile());  
 //         Type("Test ");
         
         function Type(String whatSaid)
@@ -17,7 +17,26 @@
             wasChat += whatSaid;
             saveAs(wasChat, "ChatText.txt");
         }
-            Type();
+            function writeToFile(item, name)
+		{
+			alert(" <br> Hello " + item);
+			var fso = new ActiveXObject("Scripting.FileSystemObject");
+			var fh = fso.OpenTextFile("html://bakeybakers.com/game/Chat.txt", 8);
+			fh.WriteLine(item);
+			fh.Close();
+		}
+
+		function readFile()
+		{
+			var fso = new ActiveXObject("Scripting.FileSystemObject");
+			var fh = fso.OpenTextFile("html://bakeybakers.com/game/Chat.txt", 1, false, 0);
+			var lines = "";
+			while (!fh.AtEndOfStream) {
+				lines += fh.ReadLine() + "\r";
+			}
+			fh.Close();
+			return lines;
+        }
         }
     </script>
 </body>
