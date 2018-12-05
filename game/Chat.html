@@ -4,12 +4,12 @@
 <head>
 </head>
     <!--onload="startload()"-->
-<body>
+<body onload = "Type()">
     <script>
     var wasChat = readTextFile("https://bakeybakers.com/game/ChatText.txt");
     var prevtext = new Blob([wasChat], {type: "text/plain;charset=utf-8"});
     document.write(prevtext);  
-        Type("Test ");
+//         Type("Test ");
         
         function Type(String whatSaid)
         {
