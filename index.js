@@ -35,7 +35,7 @@ function GetToken() {
 function OpenLootCrate() {
   if (localStorage.canopenLS = true) {
     location.replace("https://bakeybakers.com/game/LootCrate");
-    localStorage.canopenLS
+    localStorage.canopenLS = false;
   } else {
     document.getElementById("canopen").innerHTML = "You can not open a loot Crate";
       localStorage.canopenLS = false;
