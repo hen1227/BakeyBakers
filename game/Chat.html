@@ -3,9 +3,10 @@
 <head>
 <head>
 </head>
-<body onload="startload()">
+    <!--onload="startload()"-->
+<body>
     <script>
-    var wasChat = readTextFile("file:///C:/bakeybakers.com/game/ChatText.txt");
+    var wasChat = readTextFile("https://bakeybakers.com/game/ChatText.txt");
     var prevtext = new Blob([wasChat], {type: "text/plain;charset=utf-8"});
     document.write(prevtext);  
         Type("Test ");
