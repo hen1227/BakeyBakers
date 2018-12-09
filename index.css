@@ -192,7 +192,7 @@ li a:hover, .dropdown:hover .dropbtn {
   opacity: 1;
 }
 
-Minigolf.link, Minigolf.visited {
+.Minigolf:link, .Minigolf:visited {
   background-color: red;
   color: white;
   padding: 14px 25px;
@@ -202,6 +202,6 @@ Minigolf.link, Minigolf.visited {
 }
 
 
-Minigolf.hover {
+.Minigolf:hover {
   background-color: darkred;
 }
