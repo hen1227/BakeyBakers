@@ -191,3 +191,17 @@ li a:hover, .dropdown:hover .dropbtn {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+Minigolf.link, Minigolf.visited {
+  background-color: red;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+Minigolf.hover {
+  background-color: darkred;
+}
