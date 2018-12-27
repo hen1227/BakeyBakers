@@ -43,7 +43,7 @@ function OpenLootCrate() {
       localStorage.canopenLS = true;
       document.getElementById("canopen").innerHTML = "You can open a loot Crate";
       alert('You can now open a Loot crate');
-    }, 50000);
+    }, 50);
   }
 }
 
