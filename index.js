@@ -68,7 +68,7 @@ function payfive(_url) {
         location.replace(this.url);
         document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
       }else{
-        alert("You Do Not have enough Tokens to Play");
+        alert("You Do Not have enough Tokens to Play. You need 5 Tokens");
       }
     }
   }
