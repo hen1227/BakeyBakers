@@ -67,6 +67,8 @@ function payfive(_url) {
         localStorage.token = Number(localStorage.token) - 5;
         location.replace(this.url);
         document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
+      }else{
+        alert("You Do Not have enough Tokens to Play");
       }
     }
   }
