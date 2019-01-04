@@ -21,6 +21,7 @@ var shiphealth = shipmaxhealth;
 var backgroundcolor = 10;
 var score = 0;
 var points = 0;
+var mouseControl = false;
 
 function setup() {
   frameRate(30);
@@ -164,6 +165,17 @@ function draw() {
     if (shiphealth <= 0) {
       reset();
     }
+	  if(mouseControl)
+	  {
+		shipx = mouseX;  
+      if (shipx > width - 5)
+      {
+        shipx = width - 5
+      }else if (shipx < 5)
+      {
+        shipx = 5
+      }
+	  }
     shottimeout++;
     AD++;
   }
@@ -320,6 +332,11 @@ function Alien() {
       A[_my] = new explode(this.x, this.y, _my, -100);
     }
   }
+}
+
+function mousePressed(){
+	mouseControl = !mouseControl;
+
 }
 
 function keyPressed() {
