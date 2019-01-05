@@ -1,7 +1,7 @@
 var pause = true;
 var stars  = [];
 var powerups = 0;
-var starmove =  false;
+var starmove =  true;
 //1 == sheild
 //2 == fastfiring
 //3 == spreadshot
