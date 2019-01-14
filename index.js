@@ -76,14 +76,27 @@ function payfive(_url) {
 
 function payfiveChromeExtension(_url, _urlChromeExtension) {
   this.url = _url;
+  this.urlChromeExtension = _urlChromeExtension;
   if (typeof(Storage) !== "undefined") {
     if (localStorage.token) {
+      //var ExtentionDownloadConfirm_2 = confirm("Would you like to download the extention to play anywhere without");
       if (localStorage.token >= 5) {
+        var ExtentionDownloadConfirm = confirm("Would you like to download the extention to play anywhere without");
+        if(!ExtentionDownloadConfirm){
         localStorage.token = Number(localStorage.token) - 5;
         location.replace(this.url);
         document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
       }else{
-        alert("You Do Not have enough Tokens to Play. You need 5 Tokens");
+      localStorage.token = Number(localStorage.token) + 15;
+        location.replace(this.urlChromeExtension);
+        document.getElementById("tokenamount").innerHTML = "You have " + localStorage.token + " Tokens.";
+      }
+    }else{
+        var ExtentionDownloadConfirm_2 = confirm("You Do Not have enough Tokens to Play. You need 5 Tokens. Or you can play for no tokens with the extension version");
+       if(ExtentionDownloadConfirm_2)
+          {
+            location.replace(this.urlChromeExtension);
+          }
       }
     }
   }
