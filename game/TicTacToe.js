@@ -27,7 +27,8 @@ function setup() {
 
 function draw() {
   if (Winner == "X" || Winner == "O") {
-    alert("X has won! X: " + XWins + "  O: " + OWins);
+    if(Winner == "X"){ alert("X has won! X: " + XWins + "  O: " + OWins)}
+    else{alert("O has won!  X: " + XWins + "  O: " + OWins)}
     reset();
   }
 
