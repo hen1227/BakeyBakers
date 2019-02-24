@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html>
+    <link rel = "stylesheet"
+   type = "text/css"
+   href = "https://bakeybakers.com/index.css" />
   <head>
-    <script src="file:///Users/henry.abrahamsen/Documents/AtomProjects/Runner/P5js.js"></script>
-    <script src="file:///Users/henry.abrahamsen/Documents/AtomProjects/Runner/RunnerLevelsLevels.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <script src="https://bakeybakers.com/index.js"></script>
+	  <script>
+	function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      } 
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+			   </script>
+
+    <div w3-include-html="https://bakeybakers.com/header.html"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+	<Title>Runner</Title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
+
   </head>
-  <body>
-    <script src="file:///Users/henry.abrahamsen/Documents/AtomProjects/Runner/Runner.js"></script>
+  <body onload="startload()">
+    <script src="Runner.js"></script>
+    <script src="RunnerLevels.js"></script>
+    <script>
+      includeHTML();
+    </script>
+<!-- 	  <script type="text/javascript"> 
+		  var adfly_protocol = 'https';
+    var adfly_id = 18871299; 
+    var popunder_frequency_delay = 2; 
+</script> 
+<script src="https://cdn.adf.ly/js/display.js"></script> -->
   </body>
 </html>
