@@ -31,7 +31,6 @@ function setup(){
 function draw(){
 	background(100);
 	fill(250);
-	text(score, width-40, 40);
 	//Walls <<<<<<<<<<------------->>>>>>>>>>
 	fill(0);
 	strokeWeight(6);
@@ -107,13 +106,15 @@ function draw(){
 		goToPoint = goToPoint.rotate(-rotateRate);
 	}
 	if (keyIsDown(DOWN_ARROW)) {
-		acc.x += goToPoint.x;
-		acc.y += goToPoint.y;
+		acc.x += goToPoint.x/2;
+		acc.y += goToPoint.y/2;
 	}
 	if (keyIsDown(UP_ARROW)) {
 		acc.x -= goToPoint.x;
 		acc.y -= goToPoint.y;
 	}
+
+	text(score, width-40, 40);
 }
 
 function trafficCone(_x, _y){
