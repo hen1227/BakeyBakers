@@ -16,20 +16,22 @@ var score = 0;
 //
 function setup(){
 	createCanvas(600,600);
-	carX = width/4;
-	carY = height/4;
+	carX = width/2;
+	carY = height/2;
 	rectMode(CENTER);
 	goToPoint = createVector(0, 0.05);
 	acc = createVector(0, 0);
 	vel = createVector(0, 0);
 	rotateRate = PI/80;
 
-	cones.push(new trafficCone(100, 100));
+	// cones.push(new trafficCone(100, 100));
 	cones.push(new Coin(200, 100));
 }
 //
 function draw(){
-	background(200);
+	background(100);
+	fill(250);
+	text(score, width-40, 40);
 	//Walls <<<<<<<<<<------------->>>>>>>>>>
 	fill(0);
 	strokeWeight(6);
@@ -210,6 +212,6 @@ function StartReset(){
 	angle = 0;
 	acc = createVector(0,0);
 	goToPoint = createVector(0, 0.05);
-	cones.push(new trafficCone(100, 200));
+	// cones.push(new trafficCone(100, 200));
 	cones.push(new Coin(200, 200));
 }
