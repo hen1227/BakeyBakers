@@ -12,6 +12,7 @@ let goToPoint;
 let wheelTrail = [];
 var crashed = false;
 let cones = [];
+var score = 0;
 //
 function setup(){
 	createCanvas(600,600);
@@ -176,27 +177,32 @@ function Coin(_x, _y){
 			cones.push(new trafficCone(nextSpot.x, nextSpot.y));
 			this.x = myNextSpot.x;
 			this.y = myNextSpot.y;
-		}
+			score++;
+		}else
 		if(dist(this.x, this.y, carX-carWidth/2, carY+carHeight/2) < 20){
 			cones.push(new trafficCone(nextSpot.x, nextSpot.y));
 			this.x = myNextSpot.x;
 			this.y = myNextSpot.y;
-		}
+			score++;
+		}else
 		if(dist(this.x, this.y, carX+carWidth/2, carY-carHeight/2) < 20){
 			cones.push(new trafficCone(nextSpot.x, nextSpot.y));
 			this.x = myNextSpot.x;
 			this.y = myNextSpot.y;
-		}
+			score++;
+		}else
 		if(dist(this.x, this.y, carX-carWidth/2, carY-carHeight/2) < 20){
 			cones.push(new trafficCone(nextSpot.x, nextSpot.y));
 			this.x = myNextSpot.x;
 			this.y = myNextSpot.y;
+			score++;
 		}
 	}
 }
 
 function StartReset(){
 	cones.splice(cones.Length);
+	score = 0;
 	crashed = false;
 	carX = width/2;
 	carY = height/2;
