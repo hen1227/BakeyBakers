@@ -92,6 +92,7 @@ function draw(){
 
 	// ellipse(0, 0, 100, 100);
 	fill(255, 100);
+	strokeWeight(0);
 	triangle(carWidth/2, -carHeight/2, carWidth*1.5, -carHeight*2, -carWidth/2 ,-carHeight*2);
 	triangle(-carWidth/2, -carHeight/2, -carWidth*1.5, -carHeight*2, carWidth/2 ,-carHeight*2);
 	// ellipse(carWidth/2, carHeight/2, 30, 30);
