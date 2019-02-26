@@ -13,6 +13,7 @@ let wheelTrail = [];
 var crashed = false;
 let cones = [];
 var score = 0;
+var settingOpen = false;
 //
 function setup(){
 	createCanvas(600,600);
@@ -30,7 +31,6 @@ function setup(){
 //
 function draw(){
 	background(100);
-	fill(250);
 	//Walls <<<<<<<<<<------------->>>>>>>>>>
 	fill(0);
 	strokeWeight(6);
@@ -45,6 +45,8 @@ function draw(){
 			cones[i].show();
 			cones[i].hit();
 	}
+	fill(250);
+	text(score, width-40, 40);
 
 
 	// print(acc);
@@ -87,6 +89,17 @@ function draw(){
 	// velX = map((mouseX-carX), -50, 50, -1, 1);
 	// velY = map((mouseY-carY), -50, 50, -1, 1);
 	//Draw Car <<<<<------->>>>>
+
+	// ellipse(0, 0, 100, 100);
+	fill(255, 100);
+	triangle(carWidth/2, -carHeight/2, carWidth*1.5, -carHeight*2, -carWidth/2 ,-carHeight*2);
+	triangle(-carWidth/2, -carHeight/2, -carWidth*1.5, -carHeight*2, carWidth/2 ,-carHeight*2);
+	// ellipse(carWidth/2, carHeight/2, 30, 30);
+	// ellipse(-carWidth/2, carHeight/2, 30, 30);
+	// ellipse(carWidth/2, -carHeight/2, 10, 30);
+	// ellipse(-carWidth/2, -carHeight/2, 30, 30);
+
+
 	fill(0);
 	strokeWeight(1);
 	stroke(0);
@@ -113,8 +126,8 @@ function draw(){
 		acc.x -= goToPoint.x;
 		acc.y -= goToPoint.y;
 	}
-
-	text(score, width-40, 40);
+	rotate(-angle);
+	translate(-carX, -carY);
 }
 
 function trafficCone(_x, _y){
