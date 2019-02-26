@@ -16,7 +16,7 @@ var score = 0;
 var settingOpen = false;
 //
 function setup(){
-	createCanvas(windowWidth-50, windowHeight-50);
+	createCanvas(windowWidth-50, windowHeight-100);
 	carX = width/2;
 	carY = height/2;
 	rectMode(CENTER);
