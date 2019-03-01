@@ -25,8 +25,8 @@ function setup(){
 	acc = createVector(0, 0);
 	vel = createVector(0, 0);
 	rotateRate = PI/80;
-	time = random(10, 200);
-
+	// time = random(10, 200);
+	time = 125;
 	// cones.push(new trafficCone(100, 100));
 	cones.push(new Coin(200, 100));
 }
@@ -65,10 +65,17 @@ function draw(){
 		line(0, 0, width, 0);
 		line(width, 0, width, height);
 		//Cones <<<<<<<<<<------------->>>>>>>>>>
-		for(var i = 0; i < cones.length; i++)
+		for(var i = cones.length-1; i > -1; i--)
 		{
+			// print(cones);
 				cones[i].show();
 				cones[i].hit();
+				if(cones[i].destroyed)
+				{
+					// print(cones);
+					cones.splice(i, 1);
+					// print(cones);
+				}
 		}
 		fill(250);
 		text(score, width-40, 40);
@@ -165,6 +172,7 @@ function trafficCone(_x, _y){
 	this.x = _x;
 	this.y = _y;
 	this.canShow = false;
+	this.destroyed = false;
 
 	this.show = function(){
 		if(time > 5 || this.canShow)
@@ -217,6 +225,7 @@ var yDir = -500*goToPoint.y;
 function Coin(_x, _y){
 	this.x = _x;
 	this.y = _y;
+  this.destroyed = false;
 
 	this.show = function(){
 		strokeWeight(1);
@@ -226,7 +235,7 @@ function Coin(_x, _y){
 	}
 
 	this.hit = function(){
-		var myNextSpot = createVector(random(15, width-15), random(15, height-15));
+		var goingToSpawn = false;
 		var nextSpot = createVector(random(15, width-15), random(15, height-15));
 		//////////////////------------------------
 		if(dist(nextSpot.x, nextSpot.y, carX+carWidth/2, carY+carHeight/2) < 40){
@@ -244,27 +253,32 @@ function Coin(_x, _y){
 		//////////////////-------------------
 		if(dist(this.x, this.y, carX+carWidth/2, carY+carHeight/2) < 20){
 			cones.push(new trafficCone(nextSpot.x, nextSpot.y));
-			this.x = myNextSpot.x;
-			this.y = myNextSpot.y;
+			goingToSpawn = true;
+			this.destroyed = true;
 			score++;
 		}else
 		if(dist(this.x, this.y, carX-carWidth/2, carY+carHeight/2) < 20){
 			cones.push(new trafficCone(nextSpot.x, nextSpot.y));
-			this.x = myNextSpot.x;
-			this.y = myNextSpot.y;
+			goingToSpawn = true;
+			this.destroyed = true;
 			score++;
 		}else
 		if(dist(this.x, this.y, carX+carWidth/2, carY-carHeight/2) < 20){
 			cones.push(new trafficCone(nextSpot.x, nextSpot.y));
-			this.x = myNextSpot.x;
-			this.y = myNextSpot.y;
+			goingToSpawn = true;
+			this.destroyed = true;
 			score++;
 		}else
 		if(dist(this.x, this.y, carX-carWidth/2, carY-carHeight/2) < 20){
 			cones.push(new trafficCone(nextSpot.x, nextSpot.y));
-			this.x = myNextSpot.x;
-			this.y = myNextSpot.y;
+			goingToSpawn = true;
+			this.destroyed = true;
 			score++;
+		}
+		if(goingToSpawn){
+			while (!spawnCoin(this.x, this.y)) {
+			}
+			goingToSpawn = false;
 		}
 	}
 }
@@ -279,8 +293,24 @@ function mousePressed(){
 	}
 }
 
+function spawnCoin(){
+	var toReturn = true;
+	var myNextSpot = createVector(random(15, width-15), random(15, height-15));
+	for(var i = 0; i < cones.length; i++){
+		if(dist(myNextSpot.x, myNextSpot.y, cones[i].x, cones[i].y) < 30){
+			toReturn = false;
+			// cones.push(new trafficCone(myNextSpot.x, myNextSpot.y));
+		}
+	}
+	if(toReturn){
+		cones.push(new Coin(myNextSpot.x, myNextSpot.y));
+	}
+	return toReturn;
+}
+
 function StartReset(){
-	time = random(10, 200);
+	time = time;
+	// time = random(10, 200);
 	cones.splice(cones.Length);
 	score = 0;
 	crashed = false;
