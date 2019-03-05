@@ -24,7 +24,7 @@ var myPowerUp = 1;
 var myPowerUpWarring = false;
 var myPowerUpTimeOut = 0;
 var myPowerUpInUse = false;
-var levelCountTimeOut;
+var levelCountTimeOut = 0;
 
 var texturesAre = 1;
 
