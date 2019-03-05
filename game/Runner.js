@@ -159,7 +159,7 @@ function draw() {
 			}
 		}
 	}
-	if (levelCountTimeOut > 205) {
+	if (levelCountTimeOut > 650) {
 		ChooseLevel();
 		levelCountTimeOut = 0;
 		// placeSector1();
