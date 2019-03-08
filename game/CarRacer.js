@@ -15,9 +15,16 @@ let cones = [];
 var score = 0;
 var settingOpen = false;
 var time = 0;
+let backgroundImage;
+var wheelOne = [];
+var wheelTwo = [];
+var wheelThree = [];
+var wheelFour = [];
+var wheelDisapperTime = 200;
 //
 function setup(){
 	createCanvas(windowWidth-50, windowHeight-100);
+	backgroundImage = loadImage('https://bakeybakers.com/GamePictures/RBackground.jpg');
 	carX = width/2;
 	carY = height/2;
 	rectMode(CENTER);
@@ -50,6 +57,7 @@ function draw(){
 		text("Black Out", width/2 - 100, 400);
 	}else{
 		background(time);
+		// image(backgroundImage, 0, 0);
 		fill(200);
 		ellipse(10,10,10,10);
 		strokeWeight(3);
@@ -91,7 +99,57 @@ function draw(){
 		carX += vel.x;
 		carY += vel.y;
 
+//Crashing Wheel Track <<<<<<-------->>>>>>>
 
+		wheelOne.push(createVector(carX - carWidth/2, carY - carHeight/5));
+		wheelTwo.push(createVector(carX + carWidth/2, carY - carHeight/5));
+		wheelThree.push(createVector(carX - carWidth/2, carY + carHeight/5));
+		wheelFour.push(createVector(carX + carWidth/2, carY + carHeight/5));
+		for(var i = wheelOne.length-2; i > -1; i--){
+			if(i + wheelDisapperTime < wheelOne.length){
+				wheelOne.splice(i, 1)
+			}
+		}
+		for(var i = wheelTwo.length-2; i > -1; i--){
+			if(i + wheelDisapperTime < wheelTwo.length){
+				wheelTwo.splice(i, 1)
+			}
+		}
+		for(var i = wheelThree.length-2; i > -1; i--){
+			if(i + wheelDisapperTime < wheelThree.length){
+				wheelThree.splice(i, 1)
+			}
+		}
+		for(var i = wheelFour.length-2; i > -1; i--){
+			if(i + wheelDisapperTime < wheelFour.length){
+				wheelFour.splice(i, 1)
+			}
+		}
+
+
+		for(var i = 0; i < wheelOne.length-1; i++){
+			stroke(map((i+wheelDisapperTime)-wheelOne.length, wheelDisapperTime, 0, 0, time));
+			strokeWeight(3);
+			line(wheelOne[i+1].x, wheelOne[i+1].y, wheelOne[i].x, wheelOne[i].y);
+		}
+		for(var i = 0; i < wheelTwo.length-1; i++){
+			stroke(map((i+wheelDisapperTime)-wheelTwo.length, wheelDisapperTime, 0, 0, time));
+			strokeWeight(3);
+			line(wheelTwo[i+1].x, wheelTwo[i+1].y, wheelTwo[i].x, wheelTwo[i].y);
+		}
+		for(var i = 0; i < wheelThree.length-1; i++){
+			stroke(map((i+wheelDisapperTime)-wheelThree.length, wheelDisapperTime, 0, 0, time));
+			strokeWeight(3);
+			line(wheelThree[i+1].x, wheelThree[i+1].y, wheelThree[i].x, wheelThree[i].y);
+		}
+		for(var i = 0; i < wheelFour.length-1; i++){
+			stroke(map((i+wheelDisapperTime)-wheelFour.length, wheelDisapperTime, 0, 0, time));
+			strokeWeight(3);
+			line(wheelFour[i+1].x, wheelFour[i+1].y, wheelFour[i].x, wheelFour[i].y);
+			if(i + wheelDisapperTime < wheelFour.length){
+				wheelFour.splice(i, 1)
+			}
+		}
 		translate(carX, carY);
 		// ellipse(0,0,10,10);
 
@@ -312,6 +370,10 @@ function StartReset(){
 	time = time;
 	// time = random(10, 200);
 	cones.splice(cones.Length);
+	wheelOne.splice(wheelOne.Length);
+	wheelTwo.splice(wheelTwo.Length);
+	wheelThree.splice(wheelThree.Length);
+	wheelFour.splice(wheelFour.Length);
 	score = 0;
 	crashed = false;
 	carX = width/2;
@@ -323,3 +385,4 @@ function StartReset(){
 	// cones.push(new trafficCone(100, 200));
 	cones.push(new Coin(200, 200));
 }
+
