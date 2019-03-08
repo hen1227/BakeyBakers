@@ -20,7 +20,7 @@ var wheelOne = [];
 var wheelTwo = [];
 var wheelThree = [];
 var wheelFour = [];
-var wheelDisapperTime = 200;
+var wheelDisapperTime = 100;
 //
 function setup(){
 	createCanvas(windowWidth-50, windowHeight-100);
@@ -363,6 +363,3 @@ function StartReset(){
 	// cones.push(new trafficCone(100, 200));
 	cones.push(new Coin(200, 200));
 }
-es.push(new Coin(200, 200));
-}
-
