@@ -20,7 +20,7 @@ var wheelOne = [];
 var wheelTwo = [];
 var wheelThree = [];
 var wheelFour = [];
-var wheelDisapperTime = 100;
+var wheelDisapperTime = 200;
 //
 function setup(){
 	createCanvas(windowWidth-50, windowHeight-100);
@@ -109,46 +109,24 @@ function draw(){
 			if(i + wheelDisapperTime < wheelOne.length){
 				wheelOne.splice(i, 1)
 			}
-		}
-		for(var i = wheelTwo.length-2; i > -1; i--){
 			if(i + wheelDisapperTime < wheelTwo.length){
 				wheelTwo.splice(i, 1)
 			}
-		}
-		for(var i = wheelThree.length-2; i > -1; i--){
 			if(i + wheelDisapperTime < wheelThree.length){
 				wheelThree.splice(i, 1)
 			}
-		}
-		for(var i = wheelFour.length-2; i > -1; i--){
 			if(i + wheelDisapperTime < wheelFour.length){
 				wheelFour.splice(i, 1)
 			}
 		}
-
 
 		for(var i = 0; i < wheelOne.length-1; i++){
 			stroke(map((i+wheelDisapperTime)-wheelOne.length, wheelDisapperTime, 0, 0, time));
 			strokeWeight(3);
 			line(wheelOne[i+1].x, wheelOne[i+1].y, wheelOne[i].x, wheelOne[i].y);
-		}
-		for(var i = 0; i < wheelTwo.length-1; i++){
-			stroke(map((i+wheelDisapperTime)-wheelTwo.length, wheelDisapperTime, 0, 0, time));
-			strokeWeight(3);
 			line(wheelTwo[i+1].x, wheelTwo[i+1].y, wheelTwo[i].x, wheelTwo[i].y);
-		}
-		for(var i = 0; i < wheelThree.length-1; i++){
-			stroke(map((i+wheelDisapperTime)-wheelThree.length, wheelDisapperTime, 0, 0, time));
-			strokeWeight(3);
 			line(wheelThree[i+1].x, wheelThree[i+1].y, wheelThree[i].x, wheelThree[i].y);
-		}
-		for(var i = 0; i < wheelFour.length-1; i++){
-			stroke(map((i+wheelDisapperTime)-wheelFour.length, wheelDisapperTime, 0, 0, time));
-			strokeWeight(3);
 			line(wheelFour[i+1].x, wheelFour[i+1].y, wheelFour[i].x, wheelFour[i].y);
-			if(i + wheelDisapperTime < wheelFour.length){
-				wheelFour.splice(i, 1)
-			}
 		}
 		translate(carX, carY);
 		// ellipse(0,0,10,10);
@@ -384,5 +362,7 @@ function StartReset(){
 	goToPoint = createVector(0, 0.05);
 	// cones.push(new trafficCone(100, 200));
 	cones.push(new Coin(200, 200));
+}
+es.push(new Coin(200, 200));
 }
 
