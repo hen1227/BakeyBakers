@@ -48,3 +48,37 @@ function mouseReleased(){
 		nextSize = 0;
 	}
 }
+
+function circle(_x, _y, _vel, _mass, _size, _bounciness){
+  this.x = _x;
+  this.y = _y;
+  this.vel = _vel;
+  this.mass = _mass;
+  this.size = _size;
+  this.bounciness = _bounciness;
+
+  this.show = function(){
+    ellipse(this.x, this.y, this.size, this.size);
+  }
+  this.move = function(){
+    this.x += this.vel.x;
+    this.y += this.vel.y;
+    for(var i = 0; i < circles.length; i++){
+      if(dist(circles[i].x, circles[i].y, this.x, this.y) < (circles[i].size +this.size)/2 && dist(circles[i].x, circles[i].y, this.x, this.y) > 0){
+        var pointPX = (circles[i].x + this.x)/2;
+        var pointPY = (circles[i].y + this.y)/2;
+        pointPX = map(pointPX, 0, (circles[i].size +this.size)/2, -1, 1);
+        pointPY = map(pointPY, 0, (circles[i].size +this.size)/2, -1, 1);
+        this.vel.x = pointPX - circles[i].x;
+        this.vel.y = pointPY - circles[i].y;
+        // this.vel.x *= 2;
+        // this.vel.y *= 2;
+        // this.vel.x /= ((circles[i].size +this.size)/2);
+        // this.vel.y /= ((circles[i].size +this.size)/2);
+        this.vel.x = (this.vel.x/this.mass)*this.bounciness;
+        this.vel.y = (this.vel.y/this.mass)*this.bounciness;
+      }
+    }
+  }
+}
+
