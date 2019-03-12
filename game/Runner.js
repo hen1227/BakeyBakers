@@ -8,7 +8,7 @@ var characterAccelRate = 1;
 var onGround = false;
 var characterDied = false;
 var movedBy = 0;
-var amount_of_levels = 6;
+var amount_of_levels = 5;
 var CanMoveLeft = false;
 var CanMoveRight = false;
 let rects = [];
@@ -20,18 +20,19 @@ let SpikesImage;
 let BackgroundImage;
 var movingSpeed = 4;
 let whatLevelNext = [];
-var myPowerUp = 1;
+var myPowerUp = 2;
 var myPowerUpWarring = false;
 var myPowerUpTimeOut = 0;
 var myPowerUpInUse = false;
 var levelCountTimeOut = 0;
+var avgDelay = 200;
 
 var texturesAre = 1;
 
 function setup() {
-	createCanvas(420, 400);
+	createCanvas(windowWidth-50, windowHeight-100);
 	rectMode(CENTER);
-	BackgroundImage = loadImage('https://bakeybakers.com/GamePictures/RBackground.jpg');
+	// BackgroundImage = loadImage('https://bakeybakers.com/GamePictures/RBackground.jpg');
 	CannonImage = loadImage('https://bakeybakers.com/GamePictures/Cannon.png');
 	BlockImage1 = loadImage('https://bakeybakers.com/GamePictures/Block.png');
 	SpikesImage = loadImage('https://bakeybakers.com/GamePictures/Spikes.png');
@@ -47,19 +48,20 @@ function setup() {
 }
 
 function draw() {
-	if (texturesAre == 1) {
-		window.addEventListener("offline", function(e) {texturesAre = 0;});
-	} else if (texturesAre == 0) {
-		window.addEventListener("online", function(e) {texturesAre = 1;});
-	}
-	background(200);
-	if(texturesAre == 1){
-		if(backGroundX < -width){
-			backGroundX = 0;
-		}
-		image(BackgroundImage, backGroundX, 0);
-		image(BackgroundImage, width+backGroundX, 0);
-	}
+	// if (texturesAre == 1) {
+	// 	window.addEventListener("offline", function(e) {texturesAre = 0;});
+	// } else if (texturesAre == 0) {
+	// 	window.addEventListener("online", function(e) {texturesAre = 1;});
+	// }
+		// if(texturesAre == 1){
+	// 	if(backGroundX < -width){
+	// 		backGroundX = 0;
+	// 	}
+	// 	image(BackgroundImage, backGroundX, 0, width, height);
+	// 	// rect(width+backGroundX, height/2, width, height);
+	// 	image(BackgroundImage, width+backGroundX, 0, width, height);
+	// }
+	background(30);
 	if(myPowerUp == 2 && !onGround){
 		noStroke();
 		myPowerUpInUse = false;
@@ -143,23 +145,25 @@ function draw() {
 		}
 
 	}
-	if (keyIsDown(LEFT_ARROW)) {
-		if (CanMoveLeft) {
-			if (characterX < 20) {} else {
-				characterX -= movingSpeed;
-			}
-		}
-	}
-	if (keyIsDown(RIGHT_ARROW)) {
+	// if (keyIsDown(LEFT_ARROW)) {
+	// 	if (CanMoveLeft) {
+	// 		if (characterX < 20) {} else {
+	// 			characterX -= movingSpeed;
+	// 		}
+	// 	}
+	// }
 		if (CanMoveRight) {
 			if (characterX > 197) {
 				Moving(movingSpeed);
 			} else {
 				characterX += movingSpeed;
-			}
 		}
+	}else{
+		reset();
 	}
-	if (levelCountTimeOut > 650) {
+	// characterX += movingSpeed;
+	// print(levelCountTimeOut);
+	if (levelCountTimeOut > width+10) {
 		ChooseLevel();
 		levelCountTimeOut = 0;
 		// placeSector1();
@@ -296,7 +300,7 @@ function Enemy(x_, y_, S_, Delay_) {
 		} else if (texturesAre == 1) {
 			image(CannonImage, this.x - TheSize / 2, this.y - TheSize / 2);
 		}
-		if (frameCount % 100 == this.Delay) {
+		if (frameCount % avgDelay == this.Delay) {
 			shots.push(new ashot(this.x - TheSize / 2, this.y));
 		}
 	}
@@ -374,6 +378,7 @@ function ashot(_x, _y) {
 
 function reset() {
 	myPowerUp = 0;
+	levelCountTimeOut = 0;
 	myPowerUpInUse = false;
 	myPowerUpTimeOut = 0;
 	myPowerUpWarring = false;
