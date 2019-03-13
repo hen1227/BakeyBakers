@@ -65,13 +65,19 @@ function draw() {
 	if(myPowerUp == 2 && !onGround){
 		noStroke();
 		myPowerUpInUse = false;
-		if(myPowerUpTimeOut < 800)
+		if(myPowerUpTimeOut < 100)
 		{
-			fill(0,255,0, 100);
+			fill(0,255,0, 100/10);
 		}else{
-			fill(0,100,30, 100);
+			fill(0,100,30, 100/10);
 		}
-		rect(characterX, characterY - (characterVel) + 10, TheSize, TheSize);
+		if (CanMoveRight) {
+			for(var i = 0; i < 10;i++){
+				rect(characterX - movingSpeed, characterY - (characterVel) + 10, TheSize, TheSize);
+			}
+		}else{
+			rect(characterX, characterY - (characterVel) + 10, TheSize, TheSize);
+		}
 	}
 	stroke(0);
 	fill(200);
@@ -121,44 +127,49 @@ function draw() {
 		}
 	}
 
-	if (keyIsDown(DOWN_ARROW)) {
-		if(myPowerUp == 1){
-			myPowerUpTimeOut = 0;
-			myPowerUpInUse = true;
-			myPowerUp = 0;
-		}
-	}
+	// if (keyIsDown(DOWN_ARROW)) {
+	// 	if(myPowerUp == 1){
+	// 		myPowerUpTimeOut = 0;
+	// 		myPowerUpInUse = true;
+	// 		myPowerUp = 0;
+	// 	}
+	// }
 
-	if(myPowerUpInUse){
-		CanMoveLeft = false;
-		CanMoveRight = false;
-		// print(myPowerUpTimeOut);
-		myPowerUpTimeOut++;
-			fill(255,0,255,100);
-		if(myPowerUpTimeOut > 100){
-			rect(characterX+width*5, characterY, width*10, 10);
-			}else{
-				ellipse(characterX, characterY, myPowerUpTimeOut, myPowerUpTimeOut);
-		}
-		if(myPowerUpTimeOut > 200){
-			myPowerUpInUse = false;
-		}
+	// if(myPowerUpInUse){
+	// 	CanMoveLeft = false;
+	// 	CanMoveRight = false;
+	// 	// print(myPowerUpTimeOut);
+	// 	myPowerUpTimeOut++;
+	// 		fill(255,0,255,100);
+	// 	if(myPowerUpTimeOut > 10){
+	// 		rect(characterX+width*5, characterY, width*10, 10);
+	// 		}else{
+	// 			ellipse(characterX, characterY, myPowerUpTimeOut, myPowerUpTimeOut);
+	// 	}
+	// 	if(myPowerUpTimeOut > 20){
+	// 		myPowerUpInUse = false;
+	// 	}
 
-	}
+	// }
 	// if (keyIsDown(LEFT_ARROW)) {
 	// 	if (CanMoveLeft) {
 	// 		if (characterX < 20) {} else {
 	// 			characterX -= movingSpeed;
 	// 		}
-	// 	}
-	// }
+	// 	}	// }
 		if (CanMoveRight) {
 			if (characterX > 197) {
 				Moving(movingSpeed);
 			} else {
 				characterX += movingSpeed;
 		}
-	}else{
+	}
+	else{
+		Moving(movingSpeed);
+		characterX -= movingSpeed;
+	}
+
+	if(characterX < 5){
 		reset();
 	}
 	// characterX += movingSpeed;
@@ -202,7 +213,7 @@ function draw() {
 	}
 	if(myPowerUp == 2){
 		myPowerUpTimeOut++;
-		if(myPowerUpTimeOut > 1000)
+		if(myPowerUpTimeOut > 50)
 		{
 			myPowerUp = 0;
 		}
