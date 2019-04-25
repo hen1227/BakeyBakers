@@ -29,7 +29,7 @@ function setup(){
   for(var j = 0; j < rows; j++){
     for(var i = 0; i < cols; i++){
       GiveIndex++;
-      peices.push(new placePeice(i*theSize+theSize/2, j*theSize+theSize*1.5, GiveIndex));
+      peices.push(new placePeice(i*theSize+theSize/2, j*theSize+(theSize*1.5), GiveIndex));
     }
   }
 
@@ -95,7 +95,7 @@ function placePeice(_x, _y, _index){
   }
   this.place = function(_XX){
     if(!this.hasPiece){
-      if(dist(this.x, this.y, _XX, theSize*2) < theSize/2){
+      if(dist(this.x, this.y, _XX, theSize*1.5) < theSize/2){
         this.hasPiece = true;
         this.color = turn;
         if(turn == 1){
