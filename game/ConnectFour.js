@@ -29,7 +29,7 @@ function setup(){
   for(var j = 0; j < rows; j++){
     for(var i = 0; i < cols; i++){
       GiveIndex++;
-      peices.push(new placePeice(i*theSize+theSize/2, j*theSize+theSize, GiveIndex));
+      peices.push(new placePeice(i*theSize+theSize/2, j*theSize+theSize*1.5, GiveIndex));
     }
   }
 
