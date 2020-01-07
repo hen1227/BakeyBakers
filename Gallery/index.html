@@ -86,10 +86,12 @@ img:hover {
 
 <!-- The Modal -->
 <div id="LifeOnABoat" class="modal">
-<div id="LegoGuy" class="modal">
-  <span class="close">×</span>
+	<span class="close">×</span>
   <img class="modal-content" id="img01">
-  <div id="caption"></div>
+  <div id="LifeOnABoatCaption"></div>
+	
+<div id="LegoGuy" class="modal">
+  
 </div>
 
 <script>
@@ -99,7 +101,18 @@ var modal = document.getElementById('LifeOnABoat');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('LifeOnABoatImg');
 var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
+var captionText = document.getElementById("LifeOnABoatCaption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+
+var modal = document.getElementById('LifeOnABoat');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('LifeOnABoatImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("LifeOnABoatCaption");
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
