@@ -70,8 +70,7 @@ background-size: 100% 100%;
 <body>
 
 <h2>Image Modal</h2>
-<img id="LifeOnABoatImg" src="LifeOnABoat.jpg" alt="Life on a Boat" width="300" height="200">\
-<img id="LegoGuy" src="LegoGuy.jpg" alt="Lego Guy" width="300" height="200">
+<img id="LifeOnABoatImg" src="LifeOnABoat.jpg" alt="Life on a Boat" width="300" height="200">
 
 <!-- The Modal -->
 <div id="LifeOnABoat" class="modal">
@@ -79,7 +78,11 @@ background-size: 100% 100%;
   <img class="modal-content" id="img01">
   <div id="LifeOnABoatCaption"></div>
 	
+<img id="LegoGuyImg" src="LegoGuy.png" alt="Lego Guy" width="300" height="200">
 <div id="LegoGuy" class="modal">
+<span class="close">×</span>
+  <img class="modal-content" id="img02">
+  <div id="LegoGuyCaption"></div>
   
 </div>
 
@@ -96,12 +99,12 @@ img.onclick = function(){
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
 
-var modal = document.getElementById('LifeOnABoat');
+var modal = document.getElementById('LegoGuy');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('LifeOnABoatImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("LifeOnABoatCaption");
+var img = document.getElementById('LegoGuyImg');
+var modalImg = document.getElementById("img02");
+var captionText = document.getElementById("LegoGuyCaption");
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
