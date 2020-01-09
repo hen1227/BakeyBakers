@@ -69,7 +69,7 @@ background-size: 100% 100%;
 </head>
 <body>
 
-<h2>Image Modal</h2>
+<h2>Life On A Boat</h2>
 <img id="LifeOnABoatImg" src="LifeOnABoat.jpg" alt="Life on a Boat" width="300" height="200">
 
 <!-- The Modal -->
@@ -78,6 +78,7 @@ background-size: 100% 100%;
   <img class="modal-content" id="img01">
   <div id="LifeOnABoatCaption"></div>
 	
+	<h2>Lego Guy</h2>
 <img id="LegoGuyImg" src="LegoGuy.png" alt="Lego Guy" width="300" height="200">
 <div id="LegoGuy" class="modal">
 <span class="close">×</span>
@@ -98,6 +99,13 @@ img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+	
+	var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
 
 modal = document.getElementById('LegoGuy');
 
@@ -109,14 +117,6 @@ img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
 }
 </script>
 			</div>	
