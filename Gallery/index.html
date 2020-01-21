@@ -72,7 +72,7 @@ background-size: 100% 100%;
 <h2>Life On A Boat</h2>
 
 <!-- The Modal -->
-<div id="MainImage" class="modal">
+<img class="modal" id="MainImage">
 	<span class="close">×</span>
   <img class="modal-content" id="MainImage">
   <div id="MainImageCaption"></div>
@@ -121,20 +121,9 @@ imgArray[1].title = 'Lego Guy';
 
 function nextImage(element)
 {
-    var img = document.getElementById(element);
 
-    for(var i = 0; i < imgArray.length;i++)
-    {
-        if(imgArray[i].src == img.src) // << check this
-        {
-            if(i === imgArray.length){
-                document.getElementById(element).src = imgArray[0].src;
-                break;
-            }
-            document.getElementById(element).src = imgArray[i+1].src;
-            break;
-        }
-    }
+	document.getElementById('MainImage').src = imgArray[element].src;
+	document.getElementById('MainImageCaption').txt = imgArray[element].caption;
 }
 
 </script>
