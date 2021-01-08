@@ -10,11 +10,11 @@ li {
     float: left;
 }
 
-ul.normal {
+ul.b {
     line-height:140%; list-style-type:disc
 }
 
-li.normal {}
+li.b {}
 .tli {
     background-color: #333;
     border: none;
