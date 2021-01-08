@@ -9,6 +9,12 @@ ul {
 li {
     float: left;
 }
+
+ul.normal {
+    line-height:140%; list-style-type:disc
+}
+
+li.normal {}
 .tli {
     background-color: #333;
     border: none;
