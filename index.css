@@ -14,7 +14,9 @@ ul.normal {
     line-height:140%; list-style-type:disc
 }
 
-li.normal {}
+li.normal {
+    float: center;
+}
 
 .tli {
     background-color: #333;
