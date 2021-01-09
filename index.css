@@ -11,7 +11,10 @@ li.header {
 }
 
 ul.normal {
-    line-height:140%; list-style-type:disc
+    line-height:140%; 
+    list-style-type:disc;
+    display: table;
+  margin: 0 auto;
 }
 
 li.normal {
