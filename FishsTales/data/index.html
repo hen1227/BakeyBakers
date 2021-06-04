@@ -46,14 +46,14 @@ function addItem() {
   table.setAttribute("id", "myTable");
   document.body.appendChild(table);
 
-  var y = document.createElement("TR");
-  y.setAttribute("id", "myTr");
-  document.getElementById("myTable").appendChild(y);
+  var cell1 = document.createElement("cell1");
+  cell1.setAttribute("id", "cell1");
+  document.getElementById("myTable").appendChild(cell1);
 
-  var z = document.createElement("TD");
-  var t = document.createTextNode("cell");
+  var z = document.createElement("cell1");
+  var t = document.createTextNode("Lure!");
   z.appendChild(t);
-  document.getElementById("myTr").appendChild(z);
+  document.getElementById("cell1").appendChild(z);
 }
 </script>
 
