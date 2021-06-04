@@ -25,6 +25,15 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  
+  
+  import firebase from "firebase/app";
+import "firebase/database";
+
+function getReference() {
+  // [START rtdb_get_reference]
+  var database = firebase.database();
+  
 </script>
   
   
@@ -41,7 +50,23 @@ table, td {
 <button onclick="addItem()">Try it</button>
 
 <script>
+  
+  
 function addItem() {
+  
+  const dbRef = firebase.database().ref();
+dbRef.child("users").child(userId).get().then((snapshot) => {
+  if (snapshot.exists()) {
+    console.log(snapshot.val());
+  } else {
+    console.log("No data available");
+  }
+}).catch((error) => {
+  console.error(error);
+});
+  
+  
+  
   var table = document.createElement("TABLE");
   table.setAttribute("id", "myTable");
   document.body.appendChild(table);
