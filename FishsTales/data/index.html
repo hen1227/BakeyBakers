@@ -30,8 +30,6 @@
   import firebase from "firebase/app";
 import "firebase/database";
 
-function getReference() {
-  // [START rtdb_get_reference]
   var database = firebase.database();
   
 </script>
@@ -55,7 +53,7 @@ table, td {
 function addItem() {
   
   const dbRef = firebase.database().ref();
-dbRef.child("users").child(userId).get().then((snapshot) => {
+dbRef.child("users").child("data").get().then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
   } else {
