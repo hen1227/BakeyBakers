@@ -4,7 +4,7 @@ var carWidth = 30;
 var carHeight = 50;
 let vel;
 let acc;
-var accRate = 0.2;
+var accRate = 0.4;
 var angle = 0;
 var rotateRate;
 var friction = 1.06;
